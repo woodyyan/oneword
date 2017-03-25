@@ -15,6 +15,10 @@
 		821FC4EF1E78F08800A64E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */; };
 		821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4F91E78F08800A64E94 /* OneWordTests.swift */; };
 		821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC5041E78F08800A64E94 /* OneWordUITests.swift */; };
+		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
+		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
+		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
+		82E9646F1E8658A3006449E9 /* OneWordTodayExtenstion.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 821FC4DD1E78F08800A64E94;
 			remoteInfo = OneWord;
 		};
+		82E9646D1E8658A3006449E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821FC4D61E78F08800A64E94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82E964611E8658A3006449E9;
+			remoteInfo = OneWordTodayExtenstion;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82E964731E8658A3006449E9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				82E9646F1E8658A3006449E9 /* OneWordTodayExtenstion.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		821FC4DE1E78F08800A64E94 /* OneWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +74,13 @@
 		821FC5001E78F08800A64E94 /* OneWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		82E9646A1E8658A3006449E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		82E9646C1E8658A3006449E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E964741E865B1E006449E9 /* OneWordTodayExtenstion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneWordTodayExtenstion.entitlements; sourceTree = "<group>"; };
+		82E964751E865B56006449E9 /* OneWord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneWord.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +105,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82E9645F1E8658A3006449E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +122,8 @@
 				821FC4E01E78F08800A64E94 /* OneWord */,
 				821FC4F81E78F08800A64E94 /* OneWordTests */,
 				821FC5031E78F08800A64E94 /* OneWordUITests */,
+				82E964661E8658A3006449E9 /* OneWordTodayExtenstion */,
+				82E964631E8658A3006449E9 /* Frameworks */,
 				821FC4DF1E78F08800A64E94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +134,7 @@
 				821FC4DE1E78F08800A64E94 /* OneWord.app */,
 				821FC4F51E78F08800A64E94 /* OneWordTests.xctest */,
 				821FC5001E78F08800A64E94 /* OneWordUITests.xctest */,
+				82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +142,7 @@
 		821FC4E01E78F08800A64E94 /* OneWord */ = {
 			isa = PBXGroup;
 			children = (
+				82E964751E865B56006449E9 /* OneWord.entitlements */,
 				821FC4E11E78F08800A64E94 /* AppDelegate.swift */,
 				821FC4E31E78F08800A64E94 /* ViewController.swift */,
 				821FC4E51E78F08800A64E94 /* Main.storyboard */,
@@ -128,6 +172,25 @@
 			path = OneWordUITests;
 			sourceTree = "<group>";
 		};
+		82E964631E8658A3006449E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82E964641E8658A3006449E9 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82E964661E8658A3006449E9 /* OneWordTodayExtenstion */ = {
+			isa = PBXGroup;
+			children = (
+				82E964741E865B1E006449E9 /* OneWordTodayExtenstion.entitlements */,
+				82E964671E8658A3006449E9 /* TodayViewController.swift */,
+				82E964691E8658A3006449E9 /* MainInterface.storyboard */,
+				82E9646C1E8658A3006449E9 /* Info.plist */,
+			);
+			path = OneWordTodayExtenstion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +201,12 @@
 				821FC4DA1E78F08800A64E94 /* Sources */,
 				821FC4DB1E78F08800A64E94 /* Frameworks */,
 				821FC4DC1E78F08800A64E94 /* Resources */,
+				82E964731E8658A3006449E9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				82E9646E1E8658A3006449E9 /* PBXTargetDependency */,
 			);
 			name = OneWord;
 			productName = OneWord;
@@ -184,6 +249,23 @@
 			productReference = 821FC5001E78F08800A64E94 /* OneWordUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		82E964611E8658A3006449E9 /* OneWordTodayExtenstion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82E964721E8658A3006449E9 /* Build configuration list for PBXNativeTarget "OneWordTodayExtenstion" */;
+			buildPhases = (
+				82E9645E1E8658A3006449E9 /* Sources */,
+				82E9645F1E8658A3006449E9 /* Frameworks */,
+				82E964601E8658A3006449E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneWordTodayExtenstion;
+			productName = OneWordTodayExtenstion;
+			productReference = 82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +280,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XD7JAMNS86;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					821FC4F41E78F08800A64E94 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -210,6 +297,16 @@
 						DevelopmentTeam = XD7JAMNS86;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 821FC4DD1E78F08800A64E94;
+					};
+					82E964611E8658A3006449E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XD7JAMNS86;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -229,6 +326,7 @@
 				821FC4DD1E78F08800A64E94 /* OneWord */,
 				821FC4F41E78F08800A64E94 /* OneWordTests */,
 				821FC4FF1E78F08800A64E94 /* OneWordUITests */,
+				82E964611E8658A3006449E9 /* OneWordTodayExtenstion */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +353,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82E964601E8658A3006449E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +393,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82E9645E1E8658A3006449E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +413,11 @@
 			isa = PBXTargetDependency;
 			target = 821FC4DD1E78F08800A64E94 /* OneWord */;
 			targetProxy = 821FC5011E78F08800A64E94 /* PBXContainerItemProxy */;
+		};
+		82E9646E1E8658A3006449E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82E964611E8658A3006449E9 /* OneWordTodayExtenstion */;
+			targetProxy = 82E9646D1E8658A3006449E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -317,6 +436,14 @@
 				821FC4EE1E78F08800A64E94 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		82E964691E8658A3006449E9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82E9646A1E8658A3006449E9 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,7 +545,9 @@
 		821FC50A1E78F08800A64E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OneWord/OneWord.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -431,7 +560,9 @@
 		821FC50B1E78F08800A64E94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OneWord/OneWord.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -499,6 +630,34 @@
 			};
 			name = Release;
 		};
+		82E964701E8658A3006449E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneWordTodayExtenstion/OneWordTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
+				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord.OneWordTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		82E964711E8658A3006449E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneWordTodayExtenstion/OneWordTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
+				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord.OneWordTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -518,6 +677,7 @@
 				821FC50B1E78F08800A64E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		821FC50C1E78F08800A64E94 /* Build configuration list for PBXNativeTarget "OneWordTests" */ = {
 			isa = XCConfigurationList;
@@ -526,12 +686,22 @@
 				821FC50E1E78F08800A64E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		821FC50F1E78F08800A64E94 /* Build configuration list for PBXNativeTarget "OneWordUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				821FC5101E78F08800A64E94 /* Debug */,
 				821FC5111E78F08800A64E94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82E964721E8658A3006449E9 /* Build configuration list for PBXNativeTarget "OneWordTodayExtenstion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82E964701E8658A3006449E9 /* Debug */,
+				82E964711E8658A3006449E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
