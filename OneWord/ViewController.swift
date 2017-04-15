@@ -24,16 +24,28 @@ class ViewController: UIViewController {
         wordLabel.snp.makeConstraints { (maker) in
             maker.centerX.equalTo(self.view.snp.centerX)
             maker.width.equalTo(self.view)
-            maker.top.equalTo(self.view).offset(20)
+            maker.top.equalTo(self.view).offset(60)
         }
         
         let soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
         soundmarkLabel.text = word1.soundmark
+        soundmarkLabel.textAlignment = .center
         self.view.addSubview(soundmarkLabel)
+        soundmarkLabel.snp.makeConstraints { (maker) in
+            maker.centerX.equalTo(self.view.snp.centerX)
+            maker.width.equalTo(self.view)
+            maker.top.equalTo(wordLabel.snp.bottom).offset(20)
+        }
         
         let paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
         paraphraseLabel.text = word1.paraphrase
+        paraphraseLabel.textAlignment = .center
         self.view.addSubview(paraphraseLabel)
+        paraphraseLabel.snp.makeConstraints { (maker) in
+            maker.centerX.equalTo(self.view.snp.centerX)
+            maker.width.equalTo(self.view)
+            maker.top.equalTo(soundmarkLabel.snp.bottom).offset(20)
+        }
     }
 
     override func didReceiveMemoryWarning() {
