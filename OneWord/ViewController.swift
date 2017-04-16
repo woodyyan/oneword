@@ -9,27 +9,32 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
-
+class ViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let word1 = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
+        self.title = "随记单词"
+        self.view.backgroundColor = UIColor.white
         
+        let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
+        initWordUI(word: word)
+        
+    }
+    
+    private func initWordUI(word:Word){
         let wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
         wordLabel.textColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
         wordLabel.font = UIFont.systemFont(ofSize: 24)
-        wordLabel.text = word1.text;
+        wordLabel.text = word.text;
         self.view.addSubview(wordLabel)
         wordLabel.snp.makeConstraints { (maker) in
             maker.left.equalTo(self.view).offset(78)
             maker.width.equalTo(self.view).offset(-156)
-            maker.top.equalTo(self.view).offset(60)
+            maker.top.equalTo(self.view).offset(120)
         }
         
         let soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
-        soundmarkLabel.text = word1.soundmark
+        soundmarkLabel.text = word.soundmark
         soundmarkLabel.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
         self.view.addSubview(soundmarkLabel)
         soundmarkLabel.snp.makeConstraints { (maker) in
@@ -43,7 +48,7 @@ class ViewController: UIViewController {
         partOfSpeechLabel.textAlignment = .center
         partOfSpeechLabel.layer.cornerRadius = 5
         partOfSpeechLabel.layer.backgroundColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1).cgColor
-        partOfSpeechLabel.text = word1.partOfSpeech
+        partOfSpeechLabel.text = word.partOfSpeech
         partOfSpeechLabel.font = UIFont.systemFont(ofSize: 15)
         self.view.addSubview(partOfSpeechLabel)
         partOfSpeechLabel.snp.makeConstraints { (maker) in
@@ -54,7 +59,7 @@ class ViewController: UIViewController {
         }
         
         let paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
-        paraphraseLabel.text = word1.paraphrase
+        paraphraseLabel.text = word.paraphrase
         paraphraseLabel.font = UIFont.systemFont(ofSize: 17)
         paraphraseLabel.numberOfLines = 0
         paraphraseLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 1)
