@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
 class ViewController: UINavigationController {
     override func viewDidLoad() {
@@ -27,21 +27,21 @@ class ViewController: UINavigationController {
         wordLabel.font = UIFont.systemFont(ofSize: 24)
         wordLabel.text = word.text;
         self.view.addSubview(wordLabel)
-        wordLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(self.view).offset(78)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.top.equalTo(self.view).offset(120)
-        }
+//        wordLabel.snp.makeConstraints { (maker) in
+//            maker.left.equalTo(self.view).offset(78)
+//            maker.width.equalTo(self.view).offset(-156)
+//            maker.top.equalTo(self.view).offset(120)
+//        }
         
         let soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
         soundmarkLabel.text = word.soundmark
         soundmarkLabel.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
         self.view.addSubview(soundmarkLabel)
-        soundmarkLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(self.view).offset(78)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.top.equalTo(wordLabel.snp.bottom).offset(20)
-        }
+//        soundmarkLabel.snp.makeConstraints { (maker) in
+//            maker.left.equalTo(self.view).offset(78)
+//            maker.width.equalTo(self.view).offset(-156)
+//            maker.top.equalTo(wordLabel.snp.bottom).offset(20)
+//        }
         
         let partOfSpeechLabel = UILabel()
         partOfSpeechLabel.textColor = UIColor.white
@@ -51,12 +51,12 @@ class ViewController: UINavigationController {
         partOfSpeechLabel.text = word.partOfSpeech
         partOfSpeechLabel.font = UIFont.systemFont(ofSize: 15)
         self.view.addSubview(partOfSpeechLabel)
-        partOfSpeechLabel.snp.makeConstraints { (maker) in
-            maker.width.equalTo(25)
-            maker.height.equalTo(25)
-            maker.left.equalTo(self.view).offset(78)
-            maker.top.equalTo(soundmarkLabel.snp.bottom).offset(20)
-        }
+//        partOfSpeechLabel.snp.makeConstraints { (maker) in
+//            maker.width.equalTo(25)
+//            maker.height.equalTo(25)
+//            maker.left.equalTo(self.view).offset(78)
+//            maker.top.equalTo(soundmarkLabel.snp.bottom).offset(20)
+//        }
         
         let paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
         paraphraseLabel.text = word.paraphrase
@@ -64,11 +64,11 @@ class ViewController: UINavigationController {
         paraphraseLabel.numberOfLines = 0
         paraphraseLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 1)
         self.view.addSubview(paraphraseLabel)
-        paraphraseLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(partOfSpeechLabel.snp.right).offset(10)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.centerY.equalTo(partOfSpeechLabel)
-        }
+//        paraphraseLabel.snp.makeConstraints { (maker) in
+//            maker.left.equalTo(partOfSpeechLabel.snp.right).offset(10)
+//            maker.width.equalTo(self.view).offset(-156)
+//            maker.centerY.equalTo(partOfSpeechLabel)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

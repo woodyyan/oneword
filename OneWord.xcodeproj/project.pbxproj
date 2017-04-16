@@ -16,8 +16,6 @@
 		821FC4EF1E78F08800A64E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */; };
 		821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4F91E78F08800A64E94 /* OneWordTests.swift */; };
 		821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC5041E78F08800A64E94 /* OneWordUITests.swift */; };
-		82729EEA1EA31BA000F3569E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82729EE91EA31BA000F3569E /* SnapKit.framework */; };
-		82729EEC1EA31BAA00F3569E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82729EE91EA31BA000F3569E /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -57,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				82729EEC1EA31BAA00F3569E /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,7 +88,6 @@
 		821FC5001E78F08800A64E94 /* OneWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82729EE91EA31BA000F3569E /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82729EEA1EA31BA000F3569E /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +192,6 @@
 		82E964631E8658A3006449E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				82729EE91EA31BA000F3569E /* SnapKit.framework */,
 				82E964641E8658A3006449E9 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -584,6 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneWord/OneWord.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -604,6 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OneWord/OneWord.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -680,6 +676,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneWordTodayExtenstion/OneWordTodayExtenstion.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
@@ -694,6 +695,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneWordTodayExtenstion/OneWordTodayExtenstion.entitlements;
 				DEVELOPMENT_TEAM = XD7JAMNS86;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
