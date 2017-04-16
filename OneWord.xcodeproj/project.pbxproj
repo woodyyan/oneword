@@ -593,7 +593,7 @@
 				);
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -613,7 +613,7 @@
 				);
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -684,7 +684,7 @@
 				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord.OneWordTodayExtenstion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -698,7 +698,7 @@
 				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWord.OneWordTodayExtenstion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
