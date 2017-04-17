@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UINavigationController {
+class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +18,6 @@ class ViewController: UINavigationController {
         
         let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
         initWordUI(word: word)
-        
     }
     
     private func initWordUI(word:Word){

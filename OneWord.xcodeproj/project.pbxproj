@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8208BC881E8A5A810063124C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8208BC871E8A5A810063124C /* Cartfile */; };
 		821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4E11E78F08800A64E94 /* AppDelegate.swift */; };
-		821FC4E41E78F08800A64E94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4E31E78F08800A64E94 /* ViewController.swift */; };
 		821FC4E71E78F08800A64E94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4E51E78F08800A64E94 /* Main.storyboard */; };
 		821FC4EA1E78F08800A64E94 /* OneWord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4E81E78F08800A64E94 /* OneWord.xcdatamodeld */; };
 		821FC4EC1E78F08800A64E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4EB1E78F08800A64E94 /* Assets.xcassets */; };
@@ -19,6 +18,9 @@
 		824DFE441EA47E61005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		824DFE531EA4DE8E005911C2 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
+		824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
+		824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -80,7 +82,6 @@
 		8208BC871E8A5A810063124C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		821FC4DE1E78F08800A64E94 /* OneWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821FC4E11E78F08800A64E94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		821FC4E31E78F08800A64E94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		821FC4E61E78F08800A64E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		821FC4E91E78F08800A64E94 /* OneWord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneWord.xcdatamodel; sourceTree = "<group>"; };
 		821FC4EB1E78F08800A64E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824DFE421EA47E61005911C2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		824DFE5B1EA4DF47005911C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -164,11 +166,11 @@
 		821FC4E01E78F08800A64E94 /* OneWord */ = {
 			isa = PBXGroup;
 			children = (
+				824DFE5A1EA4DF47005911C2 /* Controller */,
 				82E964761E86607F006449E9 /* Model */,
 				82E964751E865B56006449E9 /* OneWord.entitlements */,
 				8208BC871E8A5A810063124C /* Cartfile */,
 				821FC4E11E78F08800A64E94 /* AppDelegate.swift */,
-				821FC4E31E78F08800A64E94 /* ViewController.swift */,
 				821FC4E51E78F08800A64E94 /* Main.storyboard */,
 				821FC4EB1E78F08800A64E94 /* Assets.xcassets */,
 				821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */,
@@ -194,6 +196,14 @@
 				821FC5061E78F08800A64E94 /* Info.plist */,
 			);
 			path = OneWordUITests;
+			sourceTree = "<group>";
+		};
+		824DFE5A1EA4DF47005911C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				824DFE5B1EA4DF47005911C2 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		82E964631E8658A3006449E9 /* Frameworks */ = {
@@ -425,8 +435,8 @@
 			files = (
 				821FC4EA1E78F08800A64E94 /* OneWord.xcdatamodeld in Sources */,
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
-				821FC4E41E78F08800A64E94 /* ViewController.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
+				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +461,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */,
+				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
