@@ -16,6 +16,9 @@
 		821FC4EF1E78F08800A64E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */; };
 		821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4F91E78F08800A64E94 /* OneWordTests.swift */; };
 		821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC5041E78F08800A64E94 /* OneWordUITests.swift */; };
+		824DFE441EA47E61005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
+		824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
+		824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -55,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +92,7 @@
 		821FC5001E78F08800A64E94 /* OneWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824DFE421EA47E61005911C2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */,
+				824DFE441EA47E61005911C2 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +199,7 @@
 		82E964631E8658A3006449E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				824DFE421EA47E61005911C2 /* SnapKit.framework */,
 				82E964641E8658A3006449E9 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -228,6 +236,7 @@
 				821FC4DC1E78F08800A64E94 /* Resources */,
 				82E964731E8658A3006449E9 /* Embed App Extensions */,
 				8208BC8D1E8A616E0063124C /* Embed Frameworks */,
+				824DFE471EA482DD005911C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -392,6 +401,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		824DFE471EA482DD005911C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n\n# removes unused architectures.\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\n\ndo\n\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\n\ndo\n\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\n\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\n\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\n\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		821FC4DA1E78F08800A64E94 /* Sources */ = {
@@ -586,6 +611,7 @@
 				);
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -607,6 +633,7 @@
 				);
 				INFOPLIST_FILE = OneWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
