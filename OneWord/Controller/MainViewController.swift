@@ -18,6 +18,23 @@ class MainViewController: UIViewController {
         
         let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
         initWordUI(word: word)
+        initWriteBoardView()
+    }
+    
+    private func initWriteBoardView(){
+        let boardView = UIView()
+        boardView.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        boardView.layer.shadowColor = UIColor.red.cgColor//UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).cgColor
+        boardView.layer.masksToBounds = false
+//        boardView.layer.shadowOffset = CGSize(width: 500, height: 300)
+        boardView.layer.shadowRadius = 5
+        self.view.addSubview(boardView)
+        boardView.snp.makeConstraints { (maker) in
+            maker.bottom.equalTo(self.view)
+            maker.left.equalTo(self.view)
+            maker.right.equalTo(self.view)
+            maker.height.equalTo(250)
+        }
     }
     
     private func initWordUI(word:Word){
