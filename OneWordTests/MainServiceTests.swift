@@ -23,8 +23,6 @@ class MainTests: XCTestCase {
     }
     
     func testShouldGetCorrectWordByRandomNumber() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         let word = service.getRandomWord()
         
         XCTAssert(word.text.characters.count > 0)

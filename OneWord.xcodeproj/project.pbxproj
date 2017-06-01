@@ -41,6 +41,10 @@
 		82E9DDBC1EE04C2C00689D02 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		82E9DDBF1EE04C5400689D02 /* MainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */; };
 		82E9DDC21EE04C9800689D02 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
+		82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
+		82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
+		82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
+		82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,7 @@
 		82E9DDAE1EDFD50300689D02 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		82E9DDB41EE0494B00689D02 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainServiceTests.swift; sourceTree = "<group>"; };
+		82E9DDC31EE04F8C00689D02 /* TodayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +249,7 @@
 				82E964671E8658A3006449E9 /* TodayViewController.swift */,
 				82E964691E8658A3006449E9 /* MainInterface.storyboard */,
 				82E9646C1E8658A3006449E9 /* Info.plist */,
+				82E9DDC31EE04F8C00689D02 /* TodayService.swift */,
 			);
 			path = OneWordTodayExtenstion;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
+				82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +491,7 @@
 				82E964791E86608B006449E9 /* Word.swift in Sources */,
 				82E9DDB61EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
+				82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */,
 				82E9DDB91EE049A500689D02 /* MainViewController.swift in Sources */,
 				82E9DDB71EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDC21EE04C9800689D02 /* Word.swift in Sources */,
@@ -502,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */,
 				824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E9DDB81EE0494B00689D02 /* MainService.swift in Sources */,

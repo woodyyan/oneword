@@ -11,14 +11,15 @@ import NotificationCenter
 import SnapKit
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    let service = TodayService()
+    
     @IBOutlet weak var wordLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         
-        let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
+        let word = service.getRandomWord()
         initWordUI(word: word)
     }
     
