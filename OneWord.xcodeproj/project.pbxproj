@@ -27,6 +27,10 @@
 		82E9646F1E8658A3006449E9 /* OneWordTodayExtenstion.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		82E964781E86608B006449E9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
 		82E964791E86608B006449E9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
+		82E9DDAF1EDFD50300689D02 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82E9DDAE1EDFD50300689D02 /* words.txt */; };
+		82E9DDB01EDFD50300689D02 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82E9DDAE1EDFD50300689D02 /* words.txt */; };
+		82E9DDB11EDFD50300689D02 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82E9DDAE1EDFD50300689D02 /* words.txt */; };
+		82E9DDB21EDFD50300689D02 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82E9DDAE1EDFD50300689D02 /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,7 @@
 		82E964741E865B1E006449E9 /* OneWordTodayExtenstion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneWordTodayExtenstion.entitlements; sourceTree = "<group>"; };
 		82E964751E865B56006449E9 /* OneWord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneWord.entitlements; sourceTree = "<group>"; };
 		82E964771E86608B006449E9 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		82E9DDAE1EDFD50300689D02 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +177,7 @@
 				8208BC871E8A5A810063124C /* Cartfile */,
 				821FC4E11E78F08800A64E94 /* AppDelegate.swift */,
 				821FC4E51E78F08800A64E94 /* Main.storyboard */,
+				82E9DDAE1EDFD50300689D02 /* words.txt */,
 				821FC4EB1E78F08800A64E94 /* Assets.xcassets */,
 				821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */,
 				821FC4F01E78F08800A64E94 /* Info.plist */,
@@ -385,6 +391,7 @@
 				821FC4EC1E78F08800A64E94 /* Assets.xcassets in Resources */,
 				8208BC881E8A5A810063124C /* Cartfile in Resources */,
 				821FC4E71E78F08800A64E94 /* Main.storyboard in Resources */,
+				82E9DDAF1EDFD50300689D02 /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E9DDB01EDFD50300689D02 /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E9DDB11EDFD50300689D02 /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E9DDB21EDFD50300689D02 /* words.txt in Resources */,
 				82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

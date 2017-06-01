@@ -19,6 +19,16 @@ class MainViewController: UIViewController {
         let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
         initWordUI(word: word)
         initWriteBoardView()
+        
+        do {
+            if let path = Bundle.main.path(forResource: "words", ofType: "txt") {
+                let data = try String(contentsOfFile: path)
+                let myStrings = data.components(separatedBy: .newlines)
+                print(myStrings.count)
+            }
+        } catch let error{
+            print(error)
+        }
     }
     
     private func initWriteBoardView(){
