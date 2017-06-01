@@ -10,25 +10,17 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController {
+    private let service = MainService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "随记单词"
         self.view.backgroundColor = UIColor.white
         
-        let word = Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
+        let word = service.getRandomWord()
         initWordUI(word: word)
         initWriteBoardView()
-        
-        do {
-            if let path = Bundle.main.path(forResource: "words", ofType: "txt") {
-                let data = try String(contentsOfFile: path)
-                let myStrings = data.components(separatedBy: .newlines)
-                print(myStrings.count)
-            }
-        } catch let error{
-            print(error)
-        }
     }
     
     private func initWriteBoardView(){
