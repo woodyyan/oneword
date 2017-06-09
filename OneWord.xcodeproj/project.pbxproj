@@ -45,6 +45,14 @@
 		82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
 		82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
 		82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
+		82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
+		82E9DDCB1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
+		82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
+		82E9DDCD1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
+		82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
+		82E9DDD51EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
+		82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
+		82E9DDD71EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +133,8 @@
 		82E9DDB41EE0494B00689D02 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainServiceTests.swift; sourceTree = "<group>"; };
 		82E9DDC31EE04F8C00689D02 /* TodayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayService.swift; sourceTree = "<group>"; };
+		82E9DDC91EE6BA9B00689D02 /* WordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularlyPagedScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +200,7 @@
 		821FC4E01E78F08800A64E94 /* OneWord */ = {
 			isa = PBXGroup;
 			children = (
+				82E9DDC81EE6BA8E00689D02 /* View */,
 				82E9DDB31EE0493300689D02 /* Service */,
 				824DFE5A1EA4DF47005911C2 /* Controller */,
 				82E964761E86607F006449E9 /* Model */,
@@ -268,6 +279,15 @@
 				82E9DDB41EE0494B00689D02 /* MainService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		82E9DDC81EE6BA8E00689D02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82E9DDC91EE6BA9B00689D02 /* WordView.swift */,
+				82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +495,8 @@
 			files = (
 				821FC4EA1E78F08800A64E94 /* OneWord.xcdatamodeld in Sources */,
 				82E9DDB51EE0494B00689D02 /* MainService.swift in Sources */,
+				82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */,
+				82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
@@ -488,6 +510,8 @@
 			files = (
 				82E9DDBF1EE04C5400689D02 /* MainServiceTests.swift in Sources */,
 				821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */,
+				82E9DDCB1EE6BA9B00689D02 /* WordView.swift in Sources */,
+				82E9DDD51EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964791E86608B006449E9 /* Word.swift in Sources */,
 				82E9DDB61EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
@@ -501,9 +525,11 @@
 			files = (
 				82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */,
 				82E9DDB91EE049A500689D02 /* MainViewController.swift in Sources */,
+				82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82E9DDB71EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDC21EE04C9800689D02 /* Word.swift in Sources */,
 				821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */,
+				82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,9 +539,11 @@
 			files = (
 				82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */,
 				824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */,
+				82E9DDCD1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E9DDB81EE0494B00689D02 /* MainService.swift in Sources */,
 				82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */,
+				82E9DDD71EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

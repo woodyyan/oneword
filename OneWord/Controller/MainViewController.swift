@@ -18,8 +18,7 @@ class MainViewController: UIViewController {
         self.title = "随记单词"
         self.view.backgroundColor = UIColor.white
         
-        let word = service.getRandomWord()
-        initWordUI(word: word)
+        initWordUI()
         initWriteBoardView()
     }
     
@@ -39,53 +38,48 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func initWordUI(word:Word){
-        let wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
-        wordLabel.textColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
-        wordLabel.font = UIFont.systemFont(ofSize: 24)
-        wordLabel.text = word.text;
-        self.view.addSubview(wordLabel)
-        wordLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(self.view).offset(78)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.top.equalTo(self.view).offset(120)
+    private func initWordUI(){
+        //防止scrollview自适应navigationbar的高度，避免出现单词闪动的情况
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        var barHeight:CGFloat = 0
+        if let tempBarHeight = self.navigationController?.navigationBar.frame.height{
+            barHeight = tempBarHeight
         }
         
-        let soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
-        soundmarkLabel.text = word.soundmark
-        soundmarkLabel.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
-        self.view.addSubview(soundmarkLabel)
-        soundmarkLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(self.view).offset(78)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.top.equalTo(wordLabel.snp.bottom).offset(20)
-        }
+        let statusBarHeight:CGFloat = 22
+        let topOffset = barHeight + statusBarHeight
+        let scrollViewHeight = self.view.bounds.height - topOffset
         
-        let partOfSpeechLabel = UILabel()
-        partOfSpeechLabel.textColor = UIColor.white
-        partOfSpeechLabel.textAlignment = .center
-        partOfSpeechLabel.layer.cornerRadius = 5
-        partOfSpeechLabel.layer.backgroundColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1).cgColor
-        partOfSpeechLabel.text = word.partOfSpeech
-        partOfSpeechLabel.font = UIFont.systemFont(ofSize: 15)
-        self.view.addSubview(partOfSpeechLabel)
-        partOfSpeechLabel.snp.makeConstraints { (maker) in
-            maker.width.equalTo(25)
-            maker.height.equalTo(25)
-            maker.left.equalTo(self.view).offset(78)
-            maker.top.equalTo(soundmarkLabel.snp.bottom).offset(20)
-        }
+        let firstWord = service.getRandomWord()
+        let firstWordView = WordView(frame: self.view.frame)
+        firstWordView.wordLabel.text = firstWord.text
+        firstWordView.soundmarkLabel.text = firstWord.soundmark
+        firstWordView.partOfSpeechLabel.text = firstWord.partOfSpeech
+        firstWordView.paraphraseLabel.text = firstWord.paraphrase
         
-        let paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
-        paraphraseLabel.text = word.paraphrase
-        paraphraseLabel.font = UIFont.systemFont(ofSize: 17)
-        paraphraseLabel.numberOfLines = 0
-        paraphraseLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 1)
-        self.view.addSubview(paraphraseLabel)
-        paraphraseLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(partOfSpeechLabel.snp.right).offset(10)
-            maker.width.equalTo(self.view).offset(-156)
-            maker.centerY.equalTo(partOfSpeechLabel)
+        let secondWord = service.getRandomWord()
+        let secondWordView = WordView(frame: self.view.frame)
+        secondWordView.wordLabel.text = secondWord.text
+        secondWordView.soundmarkLabel.text = secondWord.soundmark
+        secondWordView.partOfSpeechLabel.text = secondWord.partOfSpeech
+        secondWordView.paraphraseLabel.text = secondWord.paraphrase
+        
+        let thirdWord = service.getRandomWord()
+        let thirdWordView = WordView(frame: self.view.frame)
+        thirdWordView.wordLabel.text = thirdWord.text
+        thirdWordView.soundmarkLabel.text = thirdWord.soundmark
+        thirdWordView.partOfSpeechLabel.text = thirdWord.partOfSpeech
+        thirdWordView.paraphraseLabel.text = thirdWord.paraphrase
+        
+        let loopView = CircularlyPagedScrollView(frame: self.view.frame, viewsToRotate: [firstWordView, secondWordView, thirdWordView], scrollHorizontally: true)
+        loopView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(3), height: scrollViewHeight)
+        loopView.resetMiddleViewShown(middle: loopView.viewsToRotate[2])
+        self.view.addSubview(loopView)
+        loopView.snp.makeConstraints { (maker) in
+            maker.width.equalTo(self.view)
+            maker.height.equalTo(self.view)
+            maker.left.equalTo(self.view)
         }
     }
 

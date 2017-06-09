@@ -9,6 +9,8 @@
 import Foundation
 
 class MainService {
+    private var expiredNumbers = [Int]()
+    
     func getRandomWord() -> Word{
         // Sample: Word(text: "abandon", soundmark: "[ə'bændən]", partOfSpeech: "vt.", paraphrase: "丢弃，放弃，抛弃")
         var word = Word(text: "", soundmark: "", partOfSpeech: "", paraphrase: "")
@@ -20,20 +22,23 @@ class MainService {
                 var isWordOK = false
                 while !isWordOK {
                     let randomNumber = Int(arc4random_uniform(UInt32(wordLines.count)))
-                    let wordString = wordLines[randomNumber]
-                    let components = wordString.components(separatedBy: "/")
-                    if components.count == 3 {
-                        let text = components[0]
-                        let soundmark =  "/" + components[1] + "/"
-                        var paraphraseComponents = components[2].components(separatedBy: ".")
-                        var partOfSpeech = ""
-                        var paraphrase = ""
-                        if paraphraseComponents.count >= 2 {
-                            partOfSpeech = paraphraseComponents[0] + "."
-                            paraphraseComponents.remove(at: 0)
-                            paraphrase = paraphraseComponents.joined(separator: "")
-                            word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
-                            isWordOK = true
+                    if !expiredNumbers.contains(randomNumber) {
+                        expiredNumbers.append(randomNumber)
+                        let wordString = wordLines[randomNumber]
+                        let components = wordString.components(separatedBy: "/")
+                        if components.count == 3 {
+                            let text = components[0]
+                            let soundmark =  "/" + components[1] + "/"
+                            var paraphraseComponents = components[2].components(separatedBy: ".")
+                            var partOfSpeech = ""
+                            var paraphrase = ""
+                            if paraphraseComponents.count >= 2 {
+                                partOfSpeech = paraphraseComponents[0] + "."
+                                paraphraseComponents.remove(at: 0)
+                                paraphrase = paraphraseComponents.joined(separator: "")
+                                word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
+                                isWordOK = true
+                            }
                         }
                     }
                 }
