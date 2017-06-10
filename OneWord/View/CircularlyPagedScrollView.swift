@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class CircularlyPagedScrollView: UIScrollView, UIScrollViewDelegate {
+    var circularlyPagedDelegate: CircularlyPagedDelegate?
+    
     /// All the views in the loop.
     var viewsToRotate: [UIView]!
     /// Scolls vertically if false.
@@ -69,6 +71,7 @@ class CircularlyPagedScrollView: UIScrollView, UIScrollViewDelegate {
         guard let updatedViewsShown = viewsToRotate.formThreeCircularlyConsecutiveElements(middle: middle) else {
             fatalError("No view to show.")
         }
+        circularlyPagedDelegate?.circularlyPagedScrollView(updated: updatedViewsShown, view: self)
         viewsShown = updatedViewsShown
     }
     
@@ -76,28 +79,30 @@ class CircularlyPagedScrollView: UIScrollView, UIScrollViewDelegate {
         super.layoutSubviews()
         var viewInMiddle: UIView? = nil
         if scrollHorizontally {
-            if contentOffset.x == 0 || contentOffset.x == pageWidth * 2 {
-                if contentOffset.x == 0 {
-                    viewInMiddle = viewsShown[0]
-                }
-                if contentOffset.x == pageWidth * 2 {
-                    viewInMiddle = viewsShown[2]
-                }
+            if contentOffset.x == 0 {
+                //viewInMiddle = viewsShown[0]
+                //左滑就不改变view的位置
+                return
+            }
+            else if contentOffset.x == pageWidth * 2 {
+                viewInMiddle = viewsShown[2]
             }
         } else {
-            if contentOffset.y == 0 || contentOffset.y == pageHeight * 2 {
-                if contentOffset.y == 0 {
-                    viewInMiddle = viewsShown[0]
-                }
-                if contentOffset.y == pageHeight * 2 {
-                    viewInMiddle = viewsShown[2]
-                }
+            if contentOffset.y == 0 {
+                viewInMiddle = viewsShown[0]
+            }
+            else if contentOffset.y == pageHeight * 2 {
+                viewInMiddle = viewsShown[2]
             }
         }
         if let view = viewInMiddle {
             resetMiddleViewShown(middle: view)
         }
     }
+}
+
+protocol CircularlyPagedDelegate {
+    func circularlyPagedScrollView(updated views:[UIView], view:CircularlyPagedScrollView)
 }
 
 extension Array where Element: NSObject {

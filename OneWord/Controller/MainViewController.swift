@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController {
-    private let service = MainService()
+    fileprivate let service = MainService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +73,7 @@ class MainViewController: UIViewController {
         thirdWordView.paraphraseLabel.text = thirdWord.paraphrase
         
         let loopView = CircularlyPagedScrollView(frame: self.view.frame, viewsToRotate: [firstWordView, secondWordView, thirdWordView], scrollHorizontally: true)
+        loopView.circularlyPagedDelegate = self
         loopView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(3), height: scrollViewHeight)
         loopView.resetMiddleViewShown(middle: loopView.viewsToRotate[2])
         self.view.addSubview(loopView)
@@ -86,6 +87,20 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+extension MainViewController : CircularlyPagedDelegate{
+    func circularlyPagedScrollView(updated views: [UIView], view: CircularlyPagedScrollView) {
+        if views.count > 2{
+            if let thirdView = views[2] as? WordView{
+                let thirdWord = service.getRandomWord()
+                thirdView.wordLabel.text = thirdWord.text
+                thirdView.soundmarkLabel.text = thirdWord.soundmark
+                thirdView.partOfSpeechLabel.text = thirdWord.partOfSpeech
+                thirdView.paraphraseLabel.text = thirdWord.paraphrase
+            }
+        }
     }
 }
 
