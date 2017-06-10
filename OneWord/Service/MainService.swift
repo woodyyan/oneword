@@ -9,6 +9,8 @@
 import Foundation
 
 class MainService {
+    let allPartOfSpeech = ["prep.", "pron.", "n.", "a.", "v.", "conj.", "vi.", "vt.", "aux.", "adj.", "adv.", "art.", "num.", "int.", "u.", "c.", "pl."]
+    
     private var expiredNumbers = [Int]()
     
     func getRandomWord() -> Word{
@@ -29,11 +31,12 @@ class MainService {
                         if components.count == 3 {
                             let text = components[0]
                             let soundmark =  "/" + components[1] + "/"
-                            var paraphraseComponents = components[2].components(separatedBy: ".")
+                            let allParaphrase = components[2]
+                            var paraphraseComponents = getParaphraseComponents(wholeParaphrase: allParaphrase)
                             var partOfSpeech = ""
                             var paraphrase = ""
                             if paraphraseComponents.count >= 2 {
-                                partOfSpeech = paraphraseComponents[0] + "."
+                                partOfSpeech = paraphraseComponents[0]
                                 paraphraseComponents.remove(at: 0)
                                 paraphrase = paraphraseComponents.joined(separator: "")
                                 word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
@@ -47,5 +50,89 @@ class MainService {
             print(error)
         }
         return word
+    }
+    
+    func getParaphraseComponents1(wholeParaphrase:String) -> [String]{
+        var components = [String]()
+        if hasPartOfSpeech(paraphrase: wholeParaphrase){
+            let coms = getCurrentComponents(wholeParaphrase: wholeParaphrase)
+            for com in coms{
+                if hasPartOfSpeech(paraphrase: com){
+                    let coms2 = getCurrentComponents(wholeParaphrase: com)
+                    for com2 in coms2{
+                        if hasPartOfSpeech(paraphrase: com2){
+                            let coms3 = getCurrentComponents(wholeParaphrase: com2)
+                            for com3 in coms3{
+                                if hasPartOfSpeech(paraphrase: com3){
+                                    
+                                }else{
+                                    components.append(com3)
+                                }
+                            }
+                        }else{
+                            components.append(com2)
+                        }
+                    }
+                }else{
+                    components.append(com)
+                }
+            }
+        }
+        
+        return components
+    }
+    
+    func getParaphraseComponents(wholeParaphrase:String) -> [String]{
+        var components = [String]()
+        if hasPartOfSpeech(paraphrase: wholeParaphrase){
+            components = getComponents(paraphrase: wholeParaphrase)
+        }
+        
+        return components
+    }
+    
+    private func getComponents(paraphrase:String) -> [String] {
+        var components = [String]()
+        let currentComponents = getCurrentComponents(wholeParaphrase: paraphrase)
+        for component in currentComponents{
+            if hasPartOfSpeech(paraphrase: component){
+                let tempComponents = getComponents(paraphrase:component)
+                for temp in tempComponents{
+                    components.append(temp)
+                }
+            }else{
+                components.append(component)
+            }
+        }
+        
+        return components
+    }
+    
+    func hasPartOfSpeech(paraphrase:String) -> Bool{
+        return !allPartOfSpeech.contains(paraphrase) && paraphrase.contains(".")
+    }
+    
+    func getCurrentComponents(wholeParaphrase:String) -> [String] {
+        var components = [String]()
+        for part in allPartOfSpeech{
+            let str = NSString(string: wholeParaphrase)
+            let range = str.range(of: part)
+            if range.length > 0{
+                let s1 = str.substring(to: range.location)
+                let s2 = str.substring(with: range)
+                let s3 = str.substring(from: range.location + range.length)
+                if s1.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                    components.append(s1)
+                }
+                if s2.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                    components.append(s2)
+                }
+                if s3.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                    components.append(s3)
+                }
+                break
+            }
+        }
+        return components
     }
 }

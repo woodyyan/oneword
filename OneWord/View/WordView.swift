@@ -25,7 +25,7 @@ class WordView: UIView {
         wordLabel.snp.makeConstraints { (maker) in
             maker.left.equalTo(self).offset(78)
             maker.width.equalTo(self).offset(-156)
-            maker.top.equalTo(self).offset(120)
+            maker.top.equalTo(self).offset(140)
         }
         
         soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.frame.width, height: 40))
