@@ -54,7 +54,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         partOfSpeechLabel.font = UIFont.systemFont(ofSize: 15)
         self.view.addSubview(partOfSpeechLabel)
         partOfSpeechLabel.snp.makeConstraints { (maker) in
-            maker.width.equalTo(25)
+            maker.width.greaterThanOrEqualTo(25)
             maker.height.equalTo(25)
             maker.left.equalTo(self.view).offset(36)
             maker.top.equalTo(soundmarkLabel.snp.bottom).offset(10)

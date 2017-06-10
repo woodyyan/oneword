@@ -47,7 +47,7 @@ class WordView: UIView {
         partOfSpeechLabel.font = UIFont.systemFont(ofSize: 15)
         self.addSubview(partOfSpeechLabel)
         partOfSpeechLabel.snp.makeConstraints { (maker) in
-            maker.width.equalTo(25)
+            maker.width.greaterThanOrEqualTo(25)
             maker.height.equalTo(25)
             maker.left.equalTo(self).offset(78)
             maker.top.equalTo(soundmarkLabel.snp.bottom).offset(20)
