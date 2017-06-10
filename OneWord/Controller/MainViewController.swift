@@ -25,6 +25,8 @@ class MainViewController: UIViewController {
         self.title = "随记单词"
         self.view.backgroundColor = UIColor.white
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "about"), style: .plain, target: self, action: #selector(MainViewController.aboutClick(sender:)))
+        
         initWordUI()
         initWriteBoardView()
     }
@@ -62,6 +64,10 @@ class MainViewController: UIViewController {
             maker.right.equalTo(boardView).offset(-10)
             maker.top.equalTo(boardView).offset(5)
         }
+    }
+    
+    func aboutClick(sender: UIBarButtonItem){
+        self.navigationController?.pushViewController(AboutViewController(), animated: true)
     }
     
     func clearBoard(sender:UIButton){

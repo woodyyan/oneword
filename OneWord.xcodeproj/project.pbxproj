@@ -18,13 +18,14 @@
 		8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
 		8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
 		8224D4FB1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
-		8224D4FC1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
+		8224D4FE1EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
+		8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
+		8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		824DFE441EA47E61005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		824DFE531EA4DE8E005911C2 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
 		824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
-		824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -124,6 +125,7 @@
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8224D4F81EEBD6B900FF593B /* PaintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintView.swift; sourceTree = "<group>"; };
+		8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewControler.swift; sourceTree = "<group>"; };
 		824DFE421EA47E61005911C2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		824DFE5B1EA4DF47005911C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				824DFE5B1EA4DF47005911C2 /* MainViewController.swift */,
+				8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */,
+				8224D4FE1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +528,7 @@
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
 				82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */,
+				8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +542,7 @@
 				82E9DDB71EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDC21EE04C9800689D02 /* Word.swift in Sources */,
 				821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */,
+				8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 				8224D4FB1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
@@ -547,12 +553,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */,
-				824DFE5D1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				82E9DDCD1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E9DDB81EE0494B00689D02 /* MainService.swift in Sources */,
 				82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */,
-				8224D4FC1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				82E9DDD71EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
