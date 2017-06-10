@@ -10,6 +10,11 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController {
+    fileprivate let wordTextKey = "wordText"
+    fileprivate let soundmarkKey = "soundmark"
+    fileprivate let partOfSpeechKey = "partOfSpeech"
+    fileprivate let paraphraseKey = "paraphrase"
+    
     fileprivate let service = MainService()
     
     override func viewDidLoad() {
@@ -58,7 +63,10 @@ class MainViewController: UIViewController {
         firstWordView.partOfSpeechLabel.text = firstWord.partOfSpeech
         firstWordView.paraphraseLabel.text = firstWord.paraphrase
         
-        let secondWord = service.getRandomWord()
+        var secondWord = service.getRandomWord()
+        if let localFirstWord = getFirstWordFromLocalDefaults(){
+            secondWord = localFirstWord
+        }
         let secondWordView = WordView(frame: self.view.frame)
         secondWordView.wordLabel.text = secondWord.text
         secondWordView.soundmarkLabel.text = secondWord.soundmark
@@ -88,19 +96,51 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func getFirstWordFromLocalDefaults() -> Word?{
+        guard let wordText = UserDefaults.standard.string(forKey: wordTextKey) else{
+            return nil
+        }
+        guard let soundmark = UserDefaults.standard.string(forKey: soundmarkKey) else{
+            return nil
+        }
+        guard let partOfSpeech = UserDefaults.standard.string(forKey: partOfSpeechKey) else{
+            return nil
+        }
+        guard let paraphrase = UserDefaults.standard.string(forKey: paraphraseKey) else{
+            return nil
+        }
+        return Word(text: wordText, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
+    }
 }
 
 extension MainViewController : CircularlyPagedDelegate{
     func circularlyPagedScrollView(updated views: [UIView], view: CircularlyPagedScrollView) {
         if views.count > 2{
             if let thirdView = views[2] as? WordView{
-                let thirdWord = service.getRandomWord()
-                thirdView.wordLabel.text = thirdWord.text
-                thirdView.soundmarkLabel.text = thirdWord.soundmark
-                thirdView.partOfSpeechLabel.text = thirdWord.partOfSpeech
-                thirdView.paraphraseLabel.text = thirdWord.paraphrase
+                update(third: thirdView)
+            }
+            
+            if let middleView = views[1] as? WordView{
+                save(current: middleView.wordLabel.text, soundmark: middleView.soundmarkLabel.text, partOfSpeech: middleView.partOfSpeechLabel.text, paraphrase: middleView.paraphraseLabel.text)
             }
         }
+    }
+    
+    private func save(current text:String?, soundmark:String?, partOfSpeech:String?, paraphrase:String?){
+        UserDefaults.standard.set(text, forKey: wordTextKey)
+        UserDefaults.standard.set(soundmark, forKey: soundmarkKey)
+        UserDefaults.standard.set(partOfSpeech, forKey: partOfSpeechKey)
+        UserDefaults.standard.set(paraphrase, forKey: paraphraseKey)
+        UserDefaults.standard.synchronize()
+    }
+    
+    private func update(third wordView:WordView){
+        let thirdWord = service.getRandomWord()
+        wordView.wordLabel.text = thirdWord.text
+        wordView.soundmarkLabel.text = thirdWord.soundmark
+        wordView.partOfSpeechLabel.text = thirdWord.partOfSpeech
+        wordView.paraphraseLabel.text = thirdWord.paraphrase
     }
 }
 
