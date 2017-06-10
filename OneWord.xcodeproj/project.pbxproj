@@ -15,6 +15,10 @@
 		821FC4EF1E78F08800A64E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */; };
 		821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC4F91E78F08800A64E94 /* OneWordTests.swift */; };
 		821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FC5041E78F08800A64E94 /* OneWordUITests.swift */; };
+		8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
+		8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
+		8224D4FB1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
+		8224D4FC1EEBD6B900FF593B /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4F81EEBD6B900FF593B /* PaintView.swift */; };
 		824DFE441EA47E61005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; };
 		824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +123,7 @@
 		821FC5001E78F08800A64E94 /* OneWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821FC5041E78F08800A64E94 /* OneWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWordUITests.swift; sourceTree = "<group>"; };
 		821FC5061E78F08800A64E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8224D4F81EEBD6B900FF593B /* PaintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintView.swift; sourceTree = "<group>"; };
 		824DFE421EA47E61005911C2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		824DFE5B1EA4DF47005911C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +291,7 @@
 			children = (
 				82E9DDC91EE6BA9B00689D02 /* WordView.swift */,
 				82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */,
+				8224D4F81EEBD6B900FF593B /* PaintView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */,
+				8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +523,7 @@
 				82E9DDB61EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
 				82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */,
+				8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +537,7 @@
 				82E9DDB71EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDC21EE04C9800689D02 /* Word.swift in Sources */,
 				821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */,
+				8224D4FB1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +552,7 @@
 				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E9DDB81EE0494B00689D02 /* MainService.swift in Sources */,
 				82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */,
+				8224D4FC1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				82E9DDD71EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

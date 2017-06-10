@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     
     fileprivate let service = MainService()
     
+    private var paintBoard:PaintView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +31,6 @@ class MainViewController: UIViewController {
     
     private func initWriteBoardView(){
         let boardView = UIView()
-        boardView.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
         boardView.layer.shadowColor = UIColor.red.cgColor//UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).cgColor
         boardView.layer.masksToBounds = false
 //        boardView.layer.shadowOffset = CGSize(width: 500, height: 300)
@@ -41,6 +42,30 @@ class MainViewController: UIViewController {
             maker.right.equalTo(self.view)
             maker.height.equalTo(250)
         }
+        
+        paintBoard = PaintView(frame: boardView.frame)
+        paintBoard.lineWidth = 2
+        paintBoard.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        boardView.addSubview(paintBoard)
+        paintBoard.snp.makeConstraints { (maker) in
+            maker.top.equalTo(boardView)
+            maker.left.equalTo(boardView)
+            maker.right.equalTo(boardView)
+            maker.bottom.equalTo(boardView)
+        }
+        
+        let clearButton = UIButton(type: .custom)
+        clearButton.setImage(UIImage(named: "clear"), for: .normal)
+        clearButton.addTarget(self, action: #selector(MainViewController.clearBoard(sender:)), for: .touchUpInside)
+        boardView.addSubview(clearButton)
+        clearButton.snp.makeConstraints { (maker) in
+            maker.right.equalTo(boardView).offset(-10)
+            maker.top.equalTo(boardView).offset(5)
+        }
+    }
+    
+    func clearBoard(sender:UIButton){
+        paintBoard.cleanAll()
     }
     
     private func initWordUI(){
