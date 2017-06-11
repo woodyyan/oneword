@@ -26,6 +26,22 @@
 		824DFE461EA47E79005911C2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 824DFE421EA47E61005911C2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		824DFE531EA4DE8E005911C2 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
 		824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
+		82A0E0A21EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09E1EECDF3900581956 /* AlicloudMobileAnalitics.framework */; };
+		82A0E0A31EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09E1EECDF3900581956 /* AlicloudMobileAnalitics.framework */; };
+		82A0E0A41EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09E1EECDF3900581956 /* AlicloudMobileAnalitics.framework */; };
+		82A0E0A51EECDF3900581956 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09F1EECDF3900581956 /* AlicloudUtils.framework */; };
+		82A0E0A61EECDF3900581956 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09F1EECDF3900581956 /* AlicloudUtils.framework */; };
+		82A0E0A71EECDF3900581956 /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E09F1EECDF3900581956 /* AlicloudUtils.framework */; };
+		82A0E0A81EECDF3900581956 /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A01EECDF3900581956 /* UT.framework */; };
+		82A0E0A91EECDF3900581956 /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A01EECDF3900581956 /* UT.framework */; };
+		82A0E0AA1EECDF3900581956 /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A01EECDF3900581956 /* UT.framework */; };
+		82A0E0AB1EECDF3900581956 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A11EECDF3900581956 /* UTDID.framework */; };
+		82A0E0AC1EECDF3900581956 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A11EECDF3900581956 /* UTDID.framework */; };
+		82A0E0AD1EECDF3900581956 /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0A11EECDF3900581956 /* UTDID.framework */; };
+		82A0E0AF1EECDF4B00581956 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0AE1EECDF4B00581956 /* libz.tbd */; };
+		82A0E0B11EECDF6F00581956 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B01EECDF6F00581956 /* libresolv.tbd */; };
+		82A0E0B31EECDF7500581956 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B21EECDF7500581956 /* CoreTelephony.framework */; };
+		82A0E0B51EECDF7C00581956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -128,6 +144,15 @@
 		8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewControler.swift; sourceTree = "<group>"; };
 		824DFE421EA47E61005911C2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		824DFE5B1EA4DF47005911C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		82A0E09E1EECDF3900581956 /* AlicloudMobileAnalitics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudMobileAnalitics.framework; sourceTree = "<group>"; };
+		82A0E09F1EECDF3900581956 /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
+		82A0E0A01EECDF3900581956 /* UT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UT.framework; sourceTree = "<group>"; };
+		82A0E0A11EECDF3900581956 /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
+		82A0E0AE1EECDF4B00581956 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		82A0E0B01EECDF6F00581956 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		82A0E0B21EECDF7500581956 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		82A0E0B61EECE01100581956 /* OneWord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneWord-Bridging-Header.h"; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +174,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A0E0B51EECDF7C00581956 /* SystemConfiguration.framework in Frameworks */,
+				82A0E0B31EECDF7500581956 /* CoreTelephony.framework in Frameworks */,
+				82A0E0B11EECDF6F00581956 /* libresolv.tbd in Frameworks */,
+				82A0E0AF1EECDF4B00581956 /* libz.tbd in Frameworks */,
+				82A0E0A21EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */,
+				82A0E0A81EECDF3900581956 /* UT.framework in Frameworks */,
 				824DFE451EA47E79005911C2 /* SnapKit.framework in Frameworks */,
+				82A0E0AB1EECDF3900581956 /* UTDID.framework in Frameworks */,
+				82A0E0A51EECDF3900581956 /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +190,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A0E0A31EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */,
+				82A0E0A91EECDF3900581956 /* UT.framework in Frameworks */,
 				82E9DDBB1EE04C2B00689D02 /* SnapKit.framework in Frameworks */,
+				82A0E0AC1EECDF3900581956 /* UTDID.framework in Frameworks */,
+				82A0E0A61EECDF3900581956 /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +202,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A0E0A41EECDF3900581956 /* AlicloudMobileAnalitics.framework in Frameworks */,
+				82A0E0AA1EECDF3900581956 /* UT.framework in Frameworks */,
 				82E9DDBC1EE04C2C00689D02 /* SnapKit.framework in Frameworks */,
+				82A0E0AD1EECDF3900581956 /* UTDID.framework in Frameworks */,
+				82A0E0A71EECDF3900581956 /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +259,7 @@
 				82E9DDAE1EDFD50300689D02 /* words.txt */,
 				821FC4EB1E78F08800A64E94 /* Assets.xcassets */,
 				821FC4ED1E78F08800A64E94 /* LaunchScreen.storyboard */,
+				82A0E0B61EECE01100581956 /* OneWord-Bridging-Header.h */,
 				821FC4F01E78F08800A64E94 /* Info.plist */,
 				821FC4E81E78F08800A64E94 /* OneWord.xcdatamodeld */,
 			);
@@ -255,6 +297,14 @@
 		82E964631E8658A3006449E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */,
+				82A0E0B21EECDF7500581956 /* CoreTelephony.framework */,
+				82A0E0B01EECDF6F00581956 /* libresolv.tbd */,
+				82A0E0AE1EECDF4B00581956 /* libz.tbd */,
+				82A0E09E1EECDF3900581956 /* AlicloudMobileAnalitics.framework */,
+				82A0E09F1EECDF3900581956 /* AlicloudUtils.framework */,
+				82A0E0A01EECDF3900581956 /* UT.framework */,
+				82A0E0A11EECDF3900581956 /* UTDID.framework */,
 				824DFE421EA47E61005911C2 /* SnapKit.framework */,
 				82E964641E8658A3006449E9 /* NotificationCenter.framework */,
 			);
@@ -720,6 +770,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneWord/OneWord-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -742,6 +793,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneWord/OneWord-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -755,6 +807,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = OneWordTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -774,6 +827,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = OneWordTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -792,6 +846,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = OneWordUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -810,6 +865,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = OneWordUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

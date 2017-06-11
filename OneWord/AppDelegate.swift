@@ -20,7 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.rootViewController = UINavigationController.init(rootViewController: MainViewController());
         
+        initAliyunService()
+        
         return true
+    }
+    
+    private func initAliyunService(){
+        let man = ALBBMANAnalytics.getInstance()
+//        man?.turnOnDebug()
+        man?.initWithAppKey("24230825", secretKey: "5ff601e164b633b955658810c7a1d0f9")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
