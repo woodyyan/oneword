@@ -9,7 +9,7 @@
 import Foundation
 
 class MainService {
-    let allPartOfSpeech = ["prep.", "pron.", "n.", "a.", "v.", "conj.", "vi.", "vt.", "aux.", "adj.", "adv.", "art.", "num.", "int.", "u.", "c.", "pl."]
+    let allPartOfSpeech = ["a.&ad.", "conj.&n.", "vt.&aux.", "vt.&vi.&n.", "vi.&vt.&n.", "n.&vi.&vt.", "n.&vt.&vi.", "n.&vt.", "vi.&n.", "n.&vi.", "vt.&n.", "n.&v.", "vi.&vt.", "prep.", "vt.&vi.", "pron.", "n.", "a.", "v.", "conj.", "vi.", "vt.", "aux.", "adj.", "adv.", "art.", "num.", "int.", "u.", "c.", "pl."]
     
     private var expiredNumbers = [Int]()
     
