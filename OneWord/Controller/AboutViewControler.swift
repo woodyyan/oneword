@@ -28,7 +28,7 @@ class AboutViewController: UIViewController {
         
         let sloganLabel = UILabel()
         sloganLabel.text = "玩着手机记单词"
-        sloganLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 66/255)
+        sloganLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 1)
         self.view.addSubview(sloganLabel)
         sloganLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(iconView.snp.bottom).offset(20)
@@ -36,7 +36,7 @@ class AboutViewController: UIViewController {
         }
         
         let versionLabel = UILabel()
-        versionLabel.textColor = UIColor(red: 66/255, green: 66/255, blue: 66/255, alpha: 66/255)
+        versionLabel.textColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
         versionLabel.text = "版本号：V\(getCurrentVersion())"
         versionLabel.font = UIFont.systemFont(ofSize: 14)
         self.view.addSubview(versionLabel)
