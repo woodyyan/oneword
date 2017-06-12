@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "about"), style: .plain, target: self, action: #selector(MainViewController.aboutClick(sender:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "guide"), style: .plain, target: self, action: #selector(MainViewController.guideClick(sender:)))
         
         initWordUI()
         initWriteBoardView()
@@ -68,6 +69,10 @@ class MainViewController: UIViewController {
     
     func aboutClick(sender: UIBarButtonItem){
         self.navigationController?.pushViewController(AboutViewController(), animated: true)
+    }
+    
+    func guideClick(sender: UIBarButtonItem){
+        self.navigationController?.pushViewController(GuideViewController(), animated: true)
     }
     
     func clearBoard(sender:UIButton){

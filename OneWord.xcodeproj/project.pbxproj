@@ -42,6 +42,9 @@
 		82A0E0B11EECDF6F00581956 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B01EECDF6F00581956 /* libresolv.tbd */; };
 		82A0E0B31EECDF7500581956 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B21EECDF7500581956 /* CoreTelephony.framework */; };
 		82A0E0B51EECDF7C00581956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */; };
+		82A923611EEEE6CB004937EA /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A923601EEEE6CB004937EA /* GuideViewController.swift */; };
+		82A923621EEEE6CB004937EA /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A923601EEEE6CB004937EA /* GuideViewController.swift */; };
+		82A923631EEEE6CB004937EA /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A923601EEEE6CB004937EA /* GuideViewController.swift */; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -153,6 +156,7 @@
 		82A0E0B21EECDF7500581956 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		82A0E0B61EECE01100581956 /* OneWord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneWord-Bridging-Header.h"; sourceTree = "<group>"; };
+		82A923601EEEE6CB004937EA /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 			children = (
 				824DFE5B1EA4DF47005911C2 /* MainViewController.swift */,
 				8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */,
+				82A923601EEEE6CB004937EA /* GuideViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 				82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
+				82A923611EEEE6CB004937EA /* GuideViewController.swift in Sources */,
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */,
@@ -575,6 +581,7 @@
 				82E9DDD51EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964791E86608B006449E9 /* Word.swift in Sources */,
 				82E9DDB61EE0494B00689D02 /* MainService.swift in Sources */,
+				82A923621EEEE6CB004937EA /* GuideViewController.swift in Sources */,
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
 				82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */,
@@ -589,6 +596,7 @@
 				82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */,
 				82E9DDB91EE049A500689D02 /* MainViewController.swift in Sources */,
 				82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */,
+				82A923631EEEE6CB004937EA /* GuideViewController.swift in Sources */,
 				82E9DDB71EE0494B00689D02 /* MainService.swift in Sources */,
 				82E9DDC21EE04C9800689D02 /* Word.swift in Sources */,
 				821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */,
