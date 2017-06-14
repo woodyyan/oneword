@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class AboutViewController: UIViewController {
+class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -112,7 +113,36 @@ class AboutViewController: UIViewController {
     }
     
     func feedbackClick(sender:UIButton) {
-        
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposerVC = MFMailComposeViewController()
+            mailComposerVC.mailComposeDelegate = self
+            mailComposerVC.setSubject("技能树反馈")
+            mailComposerVC.setToRecipients(["easystudio@outlook.com"])
+            self.present(mailComposerVC, animated: true, completion: nil)
+        } else {
+            //TODO: 提示无法发送邮件
+//            MessageBox.show("无法发送邮件")
+        }
+    }
+    
+    internal func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch(result){
+        case MFMailComposeResult.sent:
+//            TODO: 提示发送成功
+//            MessageBox.show("发送成功")
+            break;
+        case MFMailComposeResult.saved:
+            break
+        case MFMailComposeResult.cancelled:
+            //TODO: 提示发送取消
+//            MessageBox.show("发送取消")
+            break
+        case MFMailComposeResult.failed:
+            //TODO: 提示发送失败
+//            MessageBox.show("发送失败")
+            break
+        }
+        controller.dismiss(animated: true, completion: nil)
     }
     
     func weiboClick(sender:UIButton){
