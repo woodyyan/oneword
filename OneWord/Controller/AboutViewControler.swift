@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import NotificationBanner
 
 class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
@@ -120,27 +121,25 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
             mailComposerVC.setToRecipients(["easystudio@outlook.com"])
             self.present(mailComposerVC, animated: true, completion: nil)
         } else {
-            //TODO: 提示无法发送邮件
-//            MessageBox.show("无法发送邮件")
+            let banner = NotificationBanner(title: "无法发送邮件", subtitle: "请检查邮件设置", style: .warning)
+            banner.show()
         }
     }
     
     internal func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch(result){
         case MFMailComposeResult.sent:
-//            TODO: 提示发送成功
-//            MessageBox.show("发送成功")
-            break;
+            let banner = NotificationBanner(title: "发送成功", subtitle: "发送成功", style: .success)
+            banner.show()
         case MFMailComposeResult.saved:
-            break
+            let banner = NotificationBanner(title: "发送取消", subtitle: "发送取消", style: .info)
+            banner.show()
         case MFMailComposeResult.cancelled:
-            //TODO: 提示发送取消
-//            MessageBox.show("发送取消")
-            break
+            let banner = NotificationBanner(title: "发送取消", subtitle: "发送取消", style: .info)
+            banner.show()
         case MFMailComposeResult.failed:
-            //TODO: 提示发送失败
-//            MessageBox.show("发送失败")
-            break
+            let banner = NotificationBanner(title: "发送失败", subtitle: "发送失败", style: .warning)
+            banner.show()
         }
         controller.dismiss(animated: true, completion: nil)
     }
