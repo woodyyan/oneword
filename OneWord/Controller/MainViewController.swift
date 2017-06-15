@@ -58,12 +58,15 @@ class MainViewController: UIViewController {
         }
         
         let clearButton = UIButton(type: .custom)
+//        clearButton.backgroundColor = UIColor.red
         clearButton.setImage(UIImage(named: "clear"), for: .normal)
         clearButton.addTarget(self, action: #selector(MainViewController.clearBoard(sender:)), for: .touchUpInside)
         boardView.addSubview(clearButton)
         clearButton.snp.makeConstraints { (maker) in
-            maker.right.equalTo(boardView).offset(-10)
-            maker.top.equalTo(boardView).offset(5)
+            maker.right.equalTo(boardView)
+            maker.top.equalTo(boardView)
+            maker.width.equalTo(30)
+            maker.height.equalTo(30)
         }
     }
     
