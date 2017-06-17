@@ -23,6 +23,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         initWordUI(word: word)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.extensionContext?.open(URL(string: "EasyStudioOneWord://action=OpenHomePage")!, completionHandler: nil)
+    }
+    
     private func initWordUI(word:Word){
         let wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
         wordLabel.textColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)

@@ -25,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.absoluteString.hasPrefix("OneWord://action="){
+            
+        }
+        return true
+    }
+    
     private func initAliyunService(){
         let man = ALBBMANAnalytics.getInstance()
 //        man?.turnOnDebug()
