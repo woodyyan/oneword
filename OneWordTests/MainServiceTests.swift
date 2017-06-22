@@ -69,9 +69,9 @@ class MainTests: XCTestCase {
         
         let components = service.getParaphraseComponents(wholeParaphrase: wholeParaphrase)
         
-        XCTAssert(components.count == 6)
-        XCTAssert(components[0] == "vt.")
-        XCTAssert(components[1] == "&")
+        XCTAssert(components.count == 2)
+        XCTAssert(components[0] == "vt.&vi.&n.")
+        XCTAssert(components[1] == "混和")
     }
     
     func testPerformanceExample() {
