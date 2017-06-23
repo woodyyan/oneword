@@ -109,7 +109,7 @@ assume/ ə’sju:m/ vt.假定；承担；呈现
 assure/ ə’ʃuə/ vt.使确信；向…保证 
 astonish/ əs’tɔniʃ/ vt.使惊讶，使吃惊  
 astronaut/ ‘æstʃəunɔ:t/ n.宇宙航行员，宇航员 
-ætlantic/ ət’læntik/ a.大西洋的 n.大西洋  
+atlantic/ ət’læntik/ a.大西洋的 n.大西洋
 atom/ ‘ætəm/ n.原子；微粒；微量 
 atomic/ ə’tɔmik/ a.原子的；原子能的  
 attach/ ə’tætʃ/ vt.缚，系，贴；附加  
@@ -3775,7 +3775,7 @@ dubious / ‘dju:bjәs/a. 可疑的,不确定的
 duplicate / ‘dju:plikit/n.复制品 vt.复制
 dwell / dwel/n.居住 vi.凝思，细想
 earnings / ‘ә:niŋz/n.工资，收入；收益
-әaster / ‘i:stә/n. 复活节
+easter / ‘i:stә/n. 复活节
 eccentric / ik’sentrik/n.怪人,偏心圆 a.古怪的,不同圆心的
 eclipse / i’klips/n.(日，月)食
 ecology / i(:)’kɔlәdʒi/n.生态学；个体生态学
