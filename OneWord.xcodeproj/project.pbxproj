@@ -72,10 +72,6 @@
 		82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
 		82E9DDBF1EE04C5400689D02 /* MainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */; };
 		82E9DDC21EE04C9800689D02 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
-		82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
-		82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
-		82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
-		82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC31EE04F8C00689D02 /* TodayService.swift */; };
 		82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
 		82E9DDCB1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
 		82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDC91EE6BA9B00689D02 /* WordView.swift */; };
@@ -179,7 +175,6 @@
 		82E9DDAE1EDFD50300689D02 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		82E9DDB41EE0494B00689D02 /* MainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainServiceTests.swift; sourceTree = "<group>"; };
-		82E9DDC31EE04F8C00689D02 /* TodayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayService.swift; sourceTree = "<group>"; };
 		82E9DDC91EE6BA9B00689D02 /* WordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularlyPagedScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -341,7 +336,6 @@
 				82E964671E8658A3006449E9 /* TodayViewController.swift */,
 				82E964691E8658A3006449E9 /* MainInterface.storyboard */,
 				82E9646C1E8658A3006449E9 /* Info.plist */,
-				82E9DDC31EE04F8C00689D02 /* TodayService.swift */,
 			);
 			path = OneWordTodayExtenstion;
 			sourceTree = "<group>";
@@ -583,7 +577,6 @@
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
 				82A923611EEEE6CB004937EA /* GuideViewController.swift in Sources */,
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
-				82E9DDC41EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */,
 				8224D4FE1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 			);
@@ -601,7 +594,6 @@
 				82E9DDB61EE0494B00689D02 /* MainService.swift in Sources */,
 				82A923621EEEE6CB004937EA /* GuideViewController.swift in Sources */,
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
-				82E9DDC51EE04F8C00689D02 /* TodayService.swift in Sources */,
 				8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 			);
@@ -611,7 +603,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E9DDC61EE04F8C00689D02 /* TodayService.swift in Sources */,
 				82E9DDB91EE049A500689D02 /* MainViewController.swift in Sources */,
 				82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82A923631EEEE6CB004937EA /* GuideViewController.swift in Sources */,
@@ -628,7 +619,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E9DDC71EE04F8C00689D02 /* TodayService.swift in Sources */,
 				82E9DDCD1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				824DFE531EA4DE8E005911C2 /* Word.swift in Sources */,
 				82E9DDB81EE0494B00689D02 /* MainService.swift in Sources */,

@@ -11,9 +11,12 @@ import NotificationCenter
 import SnapKit
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-    let service = TodayService()
+    let service = MainService()
     
-    @IBOutlet weak var wordLabel: UILabel!
+    var wordLabel:UILabel!
+    var soundmarkLabel:UILabel!
+    var partOfSpeechLabel:UILabel!
+    var paraphraseLabel:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +24,34 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         let word = service.getRandomWord()
         initWordUI(word: word)
+        initSwitchButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.extensionContext?.open(URL(string: "EasyStudioOneWord://action=OpenHomePage")!, completionHandler: nil)
     }
     
+    private func initSwitchButton(){
+        let switchButton = UIButton(type: .system)
+        switchButton.setTitle("switch", for: .normal)
+        switchButton.addTarget(self, action: #selector(TodayViewController.switchClick(sender:)), for: .touchUpInside)
+        self.view.addSubview(switchButton)
+        switchButton.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.view).offset(8)
+            maker.right.equalTo(self.view).offset(-8)
+        }
+    }
+    
+    func switchClick(sender:UIButton){
+        let word = service.getRandomWord()
+        wordLabel.text = word.text
+        soundmarkLabel.text = word.soundmark
+        partOfSpeechLabel.text = word.partOfSpeech
+        paraphraseLabel.text = word.paraphrase
+    }
+    
     private func initWordUI(word:Word){
-        let wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
+        wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
         wordLabel.textColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
         wordLabel.font = UIFont.systemFont(ofSize: 24)
         wordLabel.text = word.text;
@@ -39,7 +62,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             maker.top.equalTo(self.view).offset(8)
         }
         
-        let soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
+        soundmarkLabel = UILabel(frame: CGRect(x: 0, y: 100, width: self.view.frame.width, height: 40))
         soundmarkLabel.text = word.soundmark
         soundmarkLabel.textColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
         self.view.addSubview(soundmarkLabel)
@@ -49,7 +72,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             maker.top.equalTo(wordLabel.snp.bottom).offset(8)
         }
         
-        let partOfSpeechLabel = UILabel()
+        partOfSpeechLabel = UILabel()
         partOfSpeechLabel.textColor = UIColor.white
         partOfSpeechLabel.textAlignment = .center
         partOfSpeechLabel.layer.cornerRadius = 5
@@ -64,7 +87,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             maker.top.equalTo(soundmarkLabel.snp.bottom).offset(10)
         }
         
-        let paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
+        paraphraseLabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height: 40))
         paraphraseLabel.text = word.paraphrase
         paraphraseLabel.font = UIFont.systemFont(ofSize: 17)
         paraphraseLabel.numberOfLines = 0
@@ -91,5 +114,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         completionHandler(NCUpdateResult.newData)
     }
-    
 }
