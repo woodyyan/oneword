@@ -32,8 +32,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     private func initSwitchButton(){
-        let switchButton = UIButton(type: .system)
-        switchButton.setTitle("switch", for: .normal)
+        let switchButton = UIButton(type: .custom)
+        switchButton.setImage(UIImage(named: "Refresh"), for: .normal)
         switchButton.addTarget(self, action: #selector(TodayViewController.switchClick(sender:)), for: .touchUpInside)
         self.view.addSubview(switchButton)
         switchButton.snp.makeConstraints { (maker) in
