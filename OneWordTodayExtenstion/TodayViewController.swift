@@ -37,8 +37,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         switchButton.addTarget(self, action: #selector(TodayViewController.switchClick(sender:)), for: .touchUpInside)
         self.view.addSubview(switchButton)
         switchButton.snp.makeConstraints { (maker) in
-            maker.top.equalTo(self.view).offset(8)
-            maker.right.equalTo(self.view).offset(-8)
+            maker.top.equalTo(self.view)
+            maker.right.equalTo(self.view)
+            maker.width.equalTo(35)
+            maker.height.equalTo(35)
         }
     }
     
