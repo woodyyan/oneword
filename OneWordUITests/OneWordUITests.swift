@@ -28,9 +28,22 @@ class OneWordUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testClearButtonExist(){
+        let app = XCUIApplication()
+        let isClearExists = app.buttons["clear"].exists
+        XCTAssertTrue(isClearExists)
+    }
+
+    func testClearDrawingBoard() {
+        let app = XCUIApplication()
+        app.otherElements.containing(.navigationBar, identifier:"随记单词").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeRight()
+        app.buttons["clear"].tap()
     }
     
+    func testTipButton(){
+        let app = XCUIApplication()
+        app.navigationBars["随记单词"].buttons["guide"].tap()
+        let isExists = app.navigationBars["通知中心指南"].exists
+        XCTAssertTrue(isExists)
+    }
 }
