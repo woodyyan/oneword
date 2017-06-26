@@ -22,6 +22,9 @@
 		8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		82347E301F000307002D8024 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82347E2F1F000307002D8024 /* Media.xcassets */; };
+		82347E321F00C91D002D8024 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82347E331F00C93D002D8024 /* MarqueeLabelSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82347E341F00C956002D8024 /* NotificationBanner.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		824DFE531EA4DE8E005911C2 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964771E86608B006449E9 /* Word.swift */; };
 		824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824DFE5B1EA4DF47005911C2 /* MainViewController.swift */; };
 		82A0E0AF1EECDF4B00581956 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A0E0AE1EECDF4B00581956 /* libz.tbd */; };
@@ -119,6 +122,18 @@
 				82A923A71EF2D153004937EA /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82347E311F00C908002D8024 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				82347E341F00C956002D8024 /* NotificationBanner.framework in CopyFiles */,
+				82347E331F00C93D002D8024 /* MarqueeLabelSwift.framework in CopyFiles */,
+				82347E321F00C91D002D8024 /* SnapKit.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		82E964731E8658A3006449E9 /* Embed App Extensions */ = {
@@ -418,6 +433,7 @@
 				821FC4FC1E78F08800A64E94 /* Sources */,
 				821FC4FD1E78F08800A64E94 /* Frameworks */,
 				821FC4FE1E78F08800A64E94 /* Resources */,
+				82347E311F00C908002D8024 /* CopyFiles */,
 			);
 			buildRules = (
 			);

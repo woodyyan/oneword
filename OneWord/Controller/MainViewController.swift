@@ -58,7 +58,6 @@ class MainViewController: UIViewController {
         }
         
         let clearButton = UIButton(type: .custom)
-//        clearButton.backgroundColor = UIColor.red
         clearButton.setImage(UIImage(named: "clear"), for: .normal)
         clearButton.addTarget(self, action: #selector(MainViewController.clearBoard(sender:)), for: .touchUpInside)
         boardView.addSubview(clearButton)

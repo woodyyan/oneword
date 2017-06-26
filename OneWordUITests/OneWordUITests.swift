@@ -34,16 +34,26 @@ class OneWordUITests: XCTestCase {
         XCTAssertTrue(isClearExists)
     }
 
-    func testClearDrawingBoard() {
+    func testTapAboutButtonToOpenAboutController() {
         let app = XCUIApplication()
-        app.otherElements.containing(.navigationBar, identifier:"随记单词").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.swipeRight()
-        app.buttons["clear"].tap()
+        app.navigationBars["随记单词"].buttons["about"].tap()
+        let isExists = app.navigationBars["关于"].exists
+        XCTAssertTrue(isExists)
     }
     
-    func testTipButton(){
+    func testTapTipButtonToOpenGuideController(){
         let app = XCUIApplication()
         app.navigationBars["随记单词"].buttons["guide"].tap()
         let isExists = app.navigationBars["通知中心指南"].exists
         XCTAssertTrue(isExists)
+    }
+    
+    func testWordExists() {
+        let elementsQuery = XCUIApplication().scrollViews.otherElements
+        let predicate = NSPredicate(format:"label BEGINSWITH %@", "/")
+        let labelElement = elementsQuery.staticTexts.element(matching: predicate)
+        XCTAssertTrue(labelElement.exists)
+        let count = elementsQuery.staticTexts.count
+        XCTAssertTrue(count == 4)
     }
 }
