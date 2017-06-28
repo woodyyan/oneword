@@ -30,6 +30,8 @@ class MainViewController: UIViewController {
         
         initWordUI()
         initWriteBoardView()
+        
+        showTipsIfFirstTime()
     }
     
     private func initWriteBoardView(){
@@ -181,4 +183,65 @@ extension MainViewController : CircularlyPagedDelegate{
         wordView.paraphraseLabel.text = thirdWord.paraphrase
     }
 }
+
+extension MainViewController{
+    fileprivate static let tipsKey = "MainPageFirstTimeTipsKey"
+    
+    func showTipsIfFirstTime(){
+        if isFirstTime(){
+            showTipsView()
+            
+            UserDefaults.standard.set(true, forKey: MainViewController.tipsKey)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
+    fileprivate func isFirstTime() -> Bool{
+        let hasShown = UserDefaults.standard.bool(forKey: MainViewController.tipsKey)
+        return !hasShown
+    }
+    
+    fileprivate func showTipsView(){
+        let backgroundView = UIView(frame: UIScreen.main.bounds)
+        backgroundView.backgroundColor = UIColor.black
+        backgroundView.alpha = 0.3
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MainViewController.handleTapEvent(_:)))
+        backgroundView.addGestureRecognizer(tapGesture)
+        
+        let tipWriteImage = UIImageView(image: UIImage(named: "tip_write"))
+        backgroundView.addSubview(tipWriteImage)
+        tipWriteImage.snp.makeConstraints { (maker) in
+            maker.centerX.equalTo(backgroundView)
+            maker.bottom.equalTo(backgroundView).offset(-100)
+        }
+        
+        let tipLeftImage = UIImageView(image: UIImage(named: "tip_left"))
+        backgroundView.addSubview(tipLeftImage)
+        tipLeftImage.snp.makeConstraints { (maker) in
+            maker.left.equalTo(backgroundView).offset(35)
+            maker.bottom.equalTo(backgroundView).offset(-290)
+        }
+        
+        let tipRightImage = UIImageView(image: UIImage(named: "tip_right"))
+        backgroundView.addSubview(tipRightImage)
+        tipRightImage.snp.makeConstraints { (maker) in
+            maker.right.equalTo(backgroundView).offset(-35)
+            maker.bottom.equalTo(backgroundView).offset(-290)
+        }
+        
+        let tipClearImage = UIImageView(image: UIImage(named: "tip_clear"))
+        backgroundView.addSubview(tipClearImage)
+        tipClearImage.snp.makeConstraints { (maker) in
+            maker.right.equalTo(backgroundView).offset(-2)
+            maker.top.equalTo(backgroundView.snp.bottom).offset(-220)
+        }
+        
+        UIApplication.shared.keyWindow!.addSubview(backgroundView)
+    }
+    
+    func handleTapEvent(_ sender:UITapGestureRecognizer){
+        sender.view?.removeFromSuperview()
+    }
+}
+
 
