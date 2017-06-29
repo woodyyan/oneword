@@ -215,6 +215,16 @@ extension MainViewController{
             maker.bottom.equalTo(backgroundView).offset(-100)
         }
         
+        let writeLabel = UILabel()
+        writeLabel.text = "手写"
+        writeLabel.textColor = UIColor.white
+        writeLabel.font = UIFont.systemFont(ofSize: 14)
+        backgroundView.addSubview(writeLabel)
+        writeLabel.snp.makeConstraints { (maker) in
+            maker.top.equalTo(tipWriteImage.snp.bottom).offset(5)
+            maker.centerX.equalTo(tipWriteImage)
+        }
+        
         let tipLeftImage = UIImageView(image: UIImage(named: "tip_left"))
         backgroundView.addSubview(tipLeftImage)
         tipLeftImage.snp.makeConstraints { (maker) in
@@ -234,6 +244,16 @@ extension MainViewController{
         tipClearImage.snp.makeConstraints { (maker) in
             maker.right.equalTo(backgroundView).offset(-2)
             maker.top.equalTo(backgroundView.snp.bottom).offset(-220)
+        }
+        
+        let clearLabel = UILabel()
+        clearLabel.text = "清除"
+        clearLabel.textColor = UIColor.white
+        clearLabel.font = UIFont.systemFont(ofSize: 14)
+        backgroundView.addSubview(clearLabel)
+        clearLabel.snp.makeConstraints { (maker) in
+            maker.top.equalTo(tipClearImage.snp.bottom).offset(5)
+            maker.centerX.equalTo(tipClearImage)
         }
         
         UIApplication.shared.keyWindow!.addSubview(backgroundView)
