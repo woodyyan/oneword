@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import NotificationBanner
 
 class MainViewController: UIViewController {
     fileprivate let wordTextKey = "wordText"
@@ -84,7 +85,16 @@ class MainViewController: UIViewController {
     }
     
     func shareClick(sender:UIButton){
-        let image = ImageCreator.createWordImage(for: currentWord)
+        shareWord(currentWord)
+    }
+    
+    func shareWord(_ word:Word?){
+        if word == nil{
+            let banner = NotificationBanner(title: "分享失败", style: .warning)
+            banner.show()
+        }
+        
+        let image = ImageCreator.createWordImage(for: word!)
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: [])
         controller.excludedActivityTypes = [.addToReadingList, .assignToContact, .openInIBooks]
         self.present(controller, animated: true, completion: nil)

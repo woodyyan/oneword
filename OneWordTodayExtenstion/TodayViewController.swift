@@ -13,6 +13,7 @@ import SnapKit
 class TodayViewController: UIViewController, NCWidgetProviding {
     let service = MainService()
     
+    var currentWord:Word!
     var wordLabel:UILabel!
     var soundmarkLabel:UILabel!
     var partOfSpeechLabel:UILabel!
@@ -22,16 +23,30 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         
-        let word = service.getRandomWord()
-        initWordUI(word: word)
-        initSwitchButton()
+        currentWord = service.getRandomWord()
+        addWordUI(word: currentWord)
+        addSwitchButton()
+        addShareButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.extensionContext?.open(URL(string: "EasyStudioOneWord://action=OpenHomePage")!, completionHandler: nil)
     }
     
-    private func initSwitchButton(){
+    private func addShareButton(){
+        let shareButton = UIButton(type: .custom)
+        shareButton.setImage(UIImage(named: "share"), for: .normal)
+        shareButton.addTarget(self, action: #selector(TodayViewController.shareClick(sender:)), for: .touchUpInside)
+        self.view.addSubview(shareButton)
+        shareButton.snp.makeConstraints { (maker) in
+            maker.right.equalTo(self.view)
+            maker.bottom.equalTo(self.view)
+            maker.width.equalTo(35)
+            maker.height.equalTo(35)
+        }
+    }
+    
+    private func addSwitchButton(){
         let switchButton = UIButton(type: .custom)
         switchButton.setImage(UIImage(named: "Refresh"), for: .normal)
         switchButton.addTarget(self, action: #selector(TodayViewController.switchClick(sender:)), for: .touchUpInside)
@@ -44,6 +59,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
+    func shareClick(sender:UIButton){
+        let userDefaults = UserDefaults.init(suiteName: "group.oneWordSharedDefaults")
+        userDefaults?.set(currentWord.text, forKey: "todayWordTextKey")
+        userDefaults?.set(currentWord.soundmark, forKey: "todaySoundmarkKey")
+        userDefaults?.set(currentWord.partOfSpeech, forKey: "todayPartOfSpeechKey")
+        userDefaults?.set(currentWord.paraphrase, forKey: "todayParaphraseKey")
+        userDefaults?.synchronize()
+        self.extensionContext?.open(URL(string: "EasyStudioOneWord://action=shareWord")!, completionHandler: nil)
+    }
+    
     func switchClick(sender:UIButton){
         let word = service.getRandomWord()
         wordLabel.text = word.text
@@ -52,7 +77,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         paraphraseLabel.text = word.paraphrase
     }
     
-    private func initWordUI(word:Word){
+    private func addWordUI(word:Word){
         wordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40))
         wordLabel.textColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
         wordLabel.font = UIFont.systemFont(ofSize: 24)

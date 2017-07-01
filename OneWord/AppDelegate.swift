@@ -26,10 +26,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.absoluteString.hasPrefix("OneWord://action="){
-            
+        if url.absoluteString.hasPrefix("EasyStudioOneWord://action=shareWord"){
+            if let controller = self.window!.rootViewController?.childViewControllers.first(where: { (vc) -> Bool in
+                return vc is MainViewController
+            }) as? MainViewController{
+                let word = getSharedWordFromTodayExtension()
+                if controller.isViewLoaded{
+                    controller.shareWord(word)
+                }else{
+                    //延迟执行，因为view可能还没有load
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                        controller.shareWord(word)
+                    })
+                }
+            }
         }
         return true
+    }
+    
+    private func getSharedWordFromTodayExtension() -> Word?{
+        let userDefaults = UserDefaults.init(suiteName: "group.oneWordSharedDefaults")
+        guard let wordText = userDefaults?.string(forKey: "todayWordTextKey") else{
+            return nil
+        }
+        guard let soundmark = userDefaults?.string(forKey: "todaySoundmarkKey") else{
+            return nil
+        }
+        guard let partOfSpeech = userDefaults?.string(forKey: "todayPartOfSpeechKey") else{
+            return nil
+        }
+        guard let paraphrase = userDefaults?.string(forKey: "todayParaphraseKey") else{
+            return nil
+        }
+        return Word(text: wordText, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
     }
     
     private func initAliyunService(){
