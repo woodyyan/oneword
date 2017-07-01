@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     fileprivate let service = MainService()
     
     private var paintBoard:PaintView!
-    private var currentWord:Word!
+    private var loopView:CircularlyPagedScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +85,27 @@ class MainViewController: UIViewController {
     }
     
     func shareClick(sender:UIButton){
-        shareWord(currentWord)
+        let isFirstWord = loopView.contentOffset.x == 0
+        var word:Word?
+        if isFirstWord{
+            if let firstView = loopView.viewsShown[0] as? WordView{
+                let text = firstView.wordLabel.text!
+                let soundmark = firstView.soundmarkLabel.text!
+                let partOfSpeech = firstView.partOfSpeechLabel.text!
+                let paraphrase = firstView.paraphraseLabel.text!
+                word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
+            }
+        }else{
+            if let secondView = loopView.viewsShown[1] as? WordView{
+                let text = secondView.wordLabel.text!
+                let soundmark = secondView.soundmarkLabel.text!
+                let partOfSpeech = secondView.partOfSpeechLabel.text!
+                let paraphrase = secondView.paraphraseLabel.text!
+                word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
+            }
+        }
+        
+        shareWord(word)
     }
     
     func shareWord(_ word:Word?){
@@ -133,7 +153,6 @@ class MainViewController: UIViewController {
         firstWordView.paraphraseLabel.text = firstWord.paraphrase
         
         var secondWord = service.getRandomWord()
-        currentWord = secondWord
         if let localFirstWord = getFirstWordFromLocalDefaults(){
             secondWord = localFirstWord
         }
@@ -150,7 +169,7 @@ class MainViewController: UIViewController {
         thirdWordView.partOfSpeechLabel.text = thirdWord.partOfSpeech
         thirdWordView.paraphraseLabel.text = thirdWord.paraphrase
         
-        let loopView = CircularlyPagedScrollView(frame: self.view.frame, viewsToRotate: [firstWordView, secondWordView, thirdWordView], scrollHorizontally: true)
+        loopView = CircularlyPagedScrollView(frame: self.view.frame, viewsToRotate: [firstWordView, secondWordView, thirdWordView], scrollHorizontally: true)
         loopView.circularlyPagedDelegate = self
         loopView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(3), height: scrollViewHeight)
         loopView.resetMiddleViewShown(middle: loopView.viewsToRotate[2])
@@ -192,7 +211,11 @@ extension MainViewController : CircularlyPagedDelegate{
             }
             
             if let middleView = views[1] as? WordView{
-                save(current: middleView.wordLabel.text, soundmark: middleView.soundmarkLabel.text, partOfSpeech: middleView.partOfSpeechLabel.text, paraphrase: middleView.paraphraseLabel.text)
+                let word = middleView.wordLabel.text
+                let soundmark = middleView.soundmarkLabel.text
+                let partOfSpeech = middleView.partOfSpeechLabel.text
+                let paraphrase = middleView.paraphraseLabel.text
+                save(current: word, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
             }
         }
     }
