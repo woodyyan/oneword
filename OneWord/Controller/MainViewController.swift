@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     fileprivate let service = MainService()
     
     private var paintBoard:PaintView!
+    private var currentWord:Word!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,24 @@ class MainViewController: UIViewController {
             maker.width.equalTo(30)
             maker.height.equalTo(30)
         }
+        
+        let shareButton = UIButton(type: .custom)
+        shareButton.setImage(UIImage(named: "share"), for: .normal)
+        shareButton.addTarget(self, action: #selector(MainViewController.shareClick(sender:)), for: .touchUpInside)
+        self.view.addSubview(shareButton)
+        shareButton.snp.makeConstraints { (maker) in
+            maker.right.equalTo(self.view)
+            maker.bottom.equalTo(boardView.snp.top)
+            maker.width.equalTo(30)
+            maker.height.equalTo(30)
+        }
+    }
+    
+    func shareClick(sender:UIButton){
+        let image = ImageCreator.createWordImage(for: currentWord)
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        controller.excludedActivityTypes = [.addToReadingList, .assignToContact, .openInIBooks]
+        self.present(controller, animated: true, completion: nil)
     }
     
     func aboutClick(sender: UIBarButtonItem){
@@ -104,6 +123,7 @@ class MainViewController: UIViewController {
         firstWordView.paraphraseLabel.text = firstWord.paraphrase
         
         var secondWord = service.getRandomWord()
+        currentWord = secondWord
         if let localFirstWord = getFirstWordFromLocalDefaults(){
             secondWord = localFirstWord
         }
