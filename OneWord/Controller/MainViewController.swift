@@ -68,8 +68,8 @@ class MainViewController: UIViewController {
         clearButton.snp.makeConstraints { (maker) in
             maker.right.equalTo(boardView)
             maker.top.equalTo(boardView)
-            maker.width.equalTo(30)
-            maker.height.equalTo(30)
+            maker.width.equalTo(35)
+            maker.height.equalTo(35)
         }
         
         let shareButton = UIButton(type: .custom)
@@ -79,8 +79,8 @@ class MainViewController: UIViewController {
         shareButton.snp.makeConstraints { (maker) in
             maker.right.equalTo(self.view)
             maker.bottom.equalTo(boardView.snp.top)
-            maker.width.equalTo(30)
-            maker.height.equalTo(30)
+            maker.width.equalTo(35)
+            maker.height.equalTo(35)
         }
     }
     

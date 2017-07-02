@@ -41,8 +41,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         shareButton.snp.makeConstraints { (maker) in
             maker.right.equalTo(self.view)
             maker.bottom.equalTo(self.view)
-            maker.width.equalTo(35)
-            maker.height.equalTo(35)
+            maker.width.equalTo(38)
+            maker.height.equalTo(38)
         }
     }
     
