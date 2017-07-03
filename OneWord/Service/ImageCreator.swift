@@ -43,7 +43,7 @@ class ImageCreator {
         
         let wordLabel = UILabel()
         wordLabel.text = word.text
-        wordLabel.font = UIFont.systemFont(ofSize: 18)
+        wordLabel.font = UIFont.systemFont(ofSize: 22)
         wordLabel.textColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)
         mainView.addSubview(wordLabel)
         wordLabel.snp.makeConstraints { (maker) in
