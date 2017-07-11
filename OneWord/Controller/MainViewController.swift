@@ -17,8 +17,8 @@ class MainViewController: UIViewController {
     fileprivate let paraphraseKey = "paraphrase"
     
     fileprivate let service = MainService()
+    fileprivate var paintBoard:PaintView?
     
-    private var paintBoard:PaintView!
     private var loopView:CircularlyPagedScrollView!
     
     override func viewDidLoad() {
@@ -51,10 +51,10 @@ class MainViewController: UIViewController {
         }
         
         paintBoard = PaintView(frame: boardView.frame)
-        paintBoard.lineWidth = 2
-        paintBoard.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-        boardView.addSubview(paintBoard)
-        paintBoard.snp.makeConstraints { (maker) in
+        paintBoard!.lineWidth = 2
+        paintBoard!.backgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        boardView.addSubview(paintBoard!)
+        paintBoard!.snp.makeConstraints { (maker) in
             maker.top.equalTo(boardView)
             maker.left.equalTo(boardView)
             maker.right.equalTo(boardView)
@@ -129,7 +129,7 @@ class MainViewController: UIViewController {
     }
     
     func clearBoard(sender:UIButton){
-        paintBoard.cleanAll()
+        paintBoard?.cleanAll()
     }
     
     private func initWordUI(){
@@ -218,6 +218,7 @@ extension MainViewController : CircularlyPagedDelegate{
                 save(current: word, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
             }
         }
+        paintBoard?.cleanAll()
     }
     
     private func save(current text:String?, soundmark:String?, partOfSpeech:String?, paraphrase:String?){
