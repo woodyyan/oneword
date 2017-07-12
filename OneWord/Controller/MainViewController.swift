@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import NotificationBanner
+import UserNotifications
 
 class MainViewController: UIViewController {
     fileprivate let wordTextKey = "wordText"
@@ -34,6 +35,23 @@ class MainViewController: UIViewController {
         initWriteBoardView()
         
         showTipsIfFirstTime()
+        
+        registerNotification()
+    }
+    
+    private func registerNotification(){
+        // 获取通知权限
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in
+//            
+//            // 当用户点击“Allow”时，granted的值为true，
+//            // 当用户点击“Don't Allow”时，granted的值为false
+//            // 如果没有获取到用户授权，就会执行下面的代码
+//            if !granted {
+//                
+//                // 可以考虑在这里执行一个弹窗，提示用户获取通知权限
+//                print("需要获取通知权限才能发送通知.")
+//            }
+//        }
     }
     
     private func initWriteBoardView(){
