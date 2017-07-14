@@ -139,7 +139,7 @@ class MainViewController: UIViewController {
     }
     
     func aboutClick(sender: UIBarButtonItem){
-        self.navigationController?.pushViewController(AboutViewController(), animated: true)
+        self.navigationController?.pushViewController(SettingsViewController(), animated: true)
     }
     
     func guideClick(sender: UIBarButtonItem){

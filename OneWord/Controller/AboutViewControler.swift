@@ -11,6 +11,8 @@ import MessageUI
 import NotificationBanner
 
 class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
+    private let service = AboutService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +41,7 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         
         let versionLabel = UILabel()
         versionLabel.textColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
-        versionLabel.text = "版本号：V\(getCurrentVersion())"
+        versionLabel.text = "版本号：V\(service.getCurrentVersion())"
         versionLabel.font = UIFont.systemFont(ofSize: 14)
         self.view.addSubview(versionLabel)
         versionLabel.snp.makeConstraints { (maker) in
@@ -48,16 +50,6 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
         
         initBottomView()
-    }
-    
-    private func getCurrentVersion(_ bundleVersion:Bool = false) -> String{
-        guard let infoDic = Bundle.main.infoDictionary else {return ""}
-        guard let currentVersion = infoDic["CFBundleShortVersionString"] as? String else {return ""}
-        if let buildVersion = infoDic["CFBundleVersion"] as? String , bundleVersion == true {
-            return currentVersion + buildVersion
-        }else {
-            return currentVersion
-        }
     }
     
     private func initBottomView(){
