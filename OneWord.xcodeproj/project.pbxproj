@@ -68,6 +68,12 @@
 		82DF1BCB1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
 		82DF1BCC1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
 		82DF1BCD1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
+		82DF1BD11F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */; };
+		82DF1BD21F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */; };
+		82DF1BD31F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */; };
+		82DF1BD51F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
+		82DF1BD61F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
+		82DF1BD71F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -195,6 +201,8 @@
 		82A9238E1EF2D128004937EA /* UT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UT.framework; sourceTree = "<group>"; };
 		82A9238F1EF2D128004937EA /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		82DF1BCA1F18741400AEF01F /* AboutService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutService.swift; sourceTree = "<group>"; };
+		82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPushSettingsViewController.swift; sourceTree = "<group>"; };
+		82DF1BD41F18BF9100AEF01F /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +347,7 @@
 				8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */,
 				82A923601EEEE6CB004937EA /* GuideViewController.swift */,
 				820B84491F16787D007E3C15 /* SettingsViewController.swift */,
+				82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,6 +398,7 @@
 				82E9DDB41EE0494B00689D02 /* MainService.swift */,
 				82347E5C1F060347002D8024 /* ImageCreator.swift */,
 				82DF1BCA1F18741400AEF01F /* AboutService.swift */,
+				82DF1BD41F18BF9100AEF01F /* NotificationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -611,6 +621,7 @@
 				821FC4EA1E78F08800A64E94 /* OneWord.xcdatamodeld in Sources */,
 				82E9DDB51EE0494B00689D02 /* MainService.swift in Sources */,
 				82DF1BCB1F18741400AEF01F /* AboutService.swift in Sources */,
+				82DF1BD11F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */,
 				82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82347E5D1F060347002D8024 /* ImageCreator.swift in Sources */,
 				82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
@@ -620,6 +631,7 @@
 				824DFE5C1EA4DF47005911C2 /* MainViewController.swift in Sources */,
 				8224D4F91EEBD6B900FF593B /* PaintView.swift in Sources */,
 				8224D4FE1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
+				82DF1BD51F18BF9100AEF01F /* NotificationService.swift in Sources */,
 				820B844A1F16787D007E3C15 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +643,7 @@
 				82E9DDBF1EE04C5400689D02 /* MainServiceTests.swift in Sources */,
 				821FC4FA1E78F08800A64E94 /* OneWordTests.swift in Sources */,
 				82DF1BCC1F18741400AEF01F /* AboutService.swift in Sources */,
+				82DF1BD21F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */,
 				82E9DDCB1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82347E5E1F060347002D8024 /* ImageCreator.swift in Sources */,
 				82E9DDD51EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
@@ -640,6 +653,7 @@
 				82E9DDBA1EE049A600689D02 /* MainViewController.swift in Sources */,
 				8224D4FA1EEBD6B900FF593B /* PaintView.swift in Sources */,
 				8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
+				82DF1BD61F18BF9100AEF01F /* NotificationService.swift in Sources */,
 				820B844B1F16787D007E3C15 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +664,7 @@
 			files = (
 				82E9DDB91EE049A500689D02 /* MainViewController.swift in Sources */,
 				82DF1BCD1F18741400AEF01F /* AboutService.swift in Sources */,
+				82DF1BD71F18BF9100AEF01F /* NotificationService.swift in Sources */,
 				82E9DDCC1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				820B844C1F16787D007E3C15 /* SettingsViewController.swift in Sources */,
 				82A923631EEEE6CB004937EA /* GuideViewController.swift in Sources */,
@@ -659,6 +674,7 @@
 				821FC5051E78F08800A64E94 /* OneWordUITests.swift in Sources */,
 				8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */,
 				8224D4FB1EEBD6B900FF593B /* PaintView.swift in Sources */,
+				82DF1BD31F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */,
 				82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

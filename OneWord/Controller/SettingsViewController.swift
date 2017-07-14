@@ -66,7 +66,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            self.navigationController?.pushViewController(AboutViewController(), animated: true)
+            self.navigationController?.pushViewController(WordPushSettingsViewController(), animated: true)
         case 1:
             switch indexPath.row {
             case 0:

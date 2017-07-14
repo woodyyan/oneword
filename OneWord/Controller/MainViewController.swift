@@ -39,21 +39,6 @@ class MainViewController: UIViewController {
         registerNotification()
     }
     
-    private func registerNotification(){
-        // 获取通知权限
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in
-//            
-//            // 当用户点击“Allow”时，granted的值为true，
-//            // 当用户点击“Don't Allow”时，granted的值为false
-//            // 如果没有获取到用户授权，就会执行下面的代码
-//            if !granted {
-//                
-//                // 可以考虑在这里执行一个弹窗，提示用户获取通知权限
-//                print("需要获取通知权限才能发送通知.")
-//            }
-//        }
-    }
-    
     private func initWriteBoardView(){
         let boardView = UIView()
         boardView.layer.shadowColor = UIColor.red.cgColor//UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).cgColor
@@ -333,6 +318,62 @@ extension MainViewController{
     
     func handleTapEvent(_ sender:UITapGestureRecognizer){
         sender.view?.removeFromSuperview()
+    }
+}
+
+extension MainViewController : UNUserNotificationCenterDelegate{
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert])
+    }
+    
+    func registerNotification(){
+        // 获取通知权限
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in
+            // 当用户点击“Allow”时，granted的值为true，
+            // 当用户点击“Don't Allow”时，granted的值为false
+            // 如果没有获取到用户授权，就会执行下面的代码
+            if !granted {
+                self.alertNotificationSettingsIfNeeded()
+            }else{
+                self.setDefaultWordPushSettings()
+            }
+        }
+    }
+    
+    private func alertNotificationSettingsIfNeeded(){
+        let hasShown = UserDefaults.standard.bool(forKey: "hasShownAlertPushSettings")
+        var shownCount = UserDefaults.standard.integer(forKey: "showAlertPushSettingsCount")
+        
+        if !hasShown || shownCount >= 10{
+            let alertView = UIAlertController(title: "锁屏记单词", message: "随记单词会定时推送单词，让你瞄一眼锁屏屏幕就能记住一个单词。推送通知不会有声音和振动，请放心开启。", preferredStyle: .alert)
+            let goSettingsAction = UIAlertAction(title: "去设置", style: .default, handler: { (action) in
+                if let settingUrl = URL(string: UIApplicationOpenSettingsURLString){
+                    UIApplication.shared.open(settingUrl, options: [String : Any](), completionHandler: nil)
+                }
+            })
+            let okAction = UIAlertAction(title: "知道了", style: .default, handler: nil)
+            alertView.addAction(goSettingsAction)
+            alertView.addAction(okAction)
+            self.present(alertView, animated: true, completion: nil)
+            
+            UserDefaults.standard.set(true, forKey: "hasShownAlertPushSettings")
+            UserDefaults.standard.synchronize()
+            
+            shownCount = 0
+        }
+        
+        // 如果用户打开app10次都没有开启推送就提醒他一次
+        shownCount += 1
+        UserDefaults.standard.set(shownCount, forKey: "showAlertPushSettingsCount")
+        UserDefaults.standard.synchronize()
+    }
+    
+    func setDefaultWordPushSettings(){
+        //TODO: 读设置来设置
+        let notifcationService = NotificationService()
+        let word = service.getRandomWord()
+        notifcationService.createNotification(word: word, dateComponents: DateComponents.init())
     }
 }
 
