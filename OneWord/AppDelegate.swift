@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setPushCategories() {
-        let shareAction = UNNotificationAction(identifier: "share.action", title: "分享单词", options: [])
+        let shareAction = UNNotificationAction(identifier: "share.action", title: "分享单词", options: [.foreground])
         
         let shareCategory = UNNotificationCategory(identifier: "easystudio.oneword.sharecategory", actions: [shareAction], intentIdentifiers: [], options: [])
         

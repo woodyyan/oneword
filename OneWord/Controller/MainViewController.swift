@@ -352,6 +352,8 @@ extension MainViewController : UNUserNotificationCenterDelegate{
                 self.setDefaultWordPushSettings()
             }
         }
+        
+        UNUserNotificationCenter.current().delegate = self
     }
     
     private func alertNotificationSettingsIfNeeded(){

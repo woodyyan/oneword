@@ -118,6 +118,43 @@ class ImageCreator {
         return image!
     }
     
+    private class func createFolder(with folderUrl: URL){
+        let manager = FileManager.default
+        let exist = manager.fileExists(atPath: folderUrl.path)
+        
+        if !exist {
+            do {
+                try manager.createDirectory(at: folderUrl,withIntermediateDirectories: true,attributes: nil)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    class func saveImageToFile(with name:String, image:UIImage) -> URL? {
+        let manager = FileManager.default
+        let urlForDocument = manager.urls(for: FileManager.SearchPathDirectory.documentDirectory, in:FileManager.SearchPathDomainMask.userDomainMask)
+        let url = urlForDocument[0]
+        let folder = url.appendingPathComponent("wordImages",isDirectory: true)
+        createFolder(with: folder)
+        let imageUrl = folder.appendingPathComponent("\(name).jpg")
+        
+        let exist = manager.fileExists(atPath: imageUrl.path)
+        if !exist{
+            
+            let imageData = UIImageJPEGRepresentation(image, 1)
+            do{
+                try imageData?.write(to: URL(fileURLWithPath: imageUrl.path), options: [.atomic])
+                return imageUrl
+            }
+            catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        return nil
+    }
+    
     private class func getDateText() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")

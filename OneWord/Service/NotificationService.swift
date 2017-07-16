@@ -8,6 +8,7 @@
 
 import Foundation
 import UserNotifications
+import UIKit
 
 class NotificationService {
     private(set) var frequency:Int!
@@ -27,8 +28,8 @@ class NotificationService {
         // days是重复的天数
         let service = MainService()
         let dateComponents: Set<Calendar.Component> = [.second, .minute, .hour, .day, .month, .year]
-        let date = Calendar.current.dateComponents(dateComponents, from: Date())
-        let totalDateComponents = getDateComponents(from: date, by: frequency)
+        let currentDate = Calendar.current.dateComponents(dateComponents, from: Date())
+        let totalDateComponents = getDateComponents(from: currentDate, by: frequency)
         for date in totalDateComponents{
             let word = service.getRandomWord()
             createNotification(word: word, dateComponents: date)
@@ -147,8 +148,7 @@ class NotificationService {
     
     private func createNotification(word:Word, dateComponents:DateComponents) {
         let content = UNMutableNotificationContent()
-        // TODO: add word image
-        // content.attachments
+        content.attachments = getImageNotificationAttachment(from: word)
         content.title = word.text
         content.subtitle = word.soundmark
         content.body = word.partOfSpeech + " " + word.paraphrase
@@ -161,6 +161,28 @@ class NotificationService {
         let identifier = "easystudio.oneword.wordpush." + word.text
         
         addNotification(identifier, content, trigger)
+    }
+    
+    private func getImageNotificationAttachment(from word: Word) -> [UNNotificationAttachment] {
+        let extendedIdentifier = "word.image.jpg"
+        
+        if let imageURL = getImageUrl(by: word){
+            do {
+                let attachement = try UNNotificationAttachment(identifier: extendedIdentifier, url: imageURL, options: nil)
+                return [attachement]
+            }
+            catch let error{
+                print("attachement加载失败: " + error.localizedDescription)
+            }
+        }
+        
+        return []
+    }
+    
+    private func getImageUrl(by word: Word) -> URL?{
+        let image = ImageCreator.createWordImage(for: word)
+        let imageUrl = ImageCreator.saveImageToFile(with: word.text, image: image)
+        return imageUrl
     }
     
     // 用于创建发送通知的请求, 并将其添加到通知中心
