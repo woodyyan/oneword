@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = UINavigationController.init(rootViewController: MainViewController());
         
         initAliyunService()
+        setPushCategories()
         
         return true
     }
@@ -41,6 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         return true
+    }
+    
+    func setPushCategories() {
+        let shareAction = UNNotificationAction(identifier: "share.action", title: "分享单词", options: [])
+        
+        let shareCategory = UNNotificationCategory(identifier: "easystudio.oneword.sharecategory", actions: [shareAction], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([shareCategory])
     }
     
     private func getSharedWordFromTodayExtension() -> Word?{

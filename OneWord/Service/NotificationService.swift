@@ -152,6 +152,7 @@ class NotificationService {
         content.title = word.text
         content.subtitle = word.soundmark
         content.body = word.partOfSpeech + " " + word.paraphrase
+        content.categoryIdentifier = "easystudio.oneword.sharecategory"
         content.userInfo = ["word": word.text, "soundmark":word.soundmark, "partOfSpeech":word.partOfSpeech, "paraphrase": word.paraphrase]
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)

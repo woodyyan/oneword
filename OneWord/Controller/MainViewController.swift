@@ -326,6 +326,20 @@ extension MainViewController : UNUserNotificationCenterDelegate{
         completionHandler([.alert])
     }
     
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let action = response.actionIdentifier
+        let request = response.notification.request
+        if action == "share.action" {
+            let userInfo = request.content.userInfo
+            guard let text = userInfo["word"] as? String else { return }
+            guard let soundmark = userInfo["soundmark"] as? String else { return }
+            guard let partOfSpeech = userInfo["partOfSpeech"] as? String else { return }
+            guard let paraphrase = userInfo["paraphrase"] as? String else { return }
+            let word = Word(text: text, soundmark: soundmark, partOfSpeech: partOfSpeech, paraphrase: paraphrase)
+            shareWord(word)
+        }
+    }
+    
     func registerNotification(){
         // 获取通知权限
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in

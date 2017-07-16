@@ -37,7 +37,7 @@ class OneWordUITests: XCTestCase {
     func testTapAboutButtonToOpenAboutController() {
         let app = XCUIApplication()
         app.navigationBars["随记单词"].buttons["about"].tap()
-        let isExists = app.navigationBars["关于"].exists
+        let isExists = app.navigationBars["设置"].exists
         XCTAssertTrue(isExists)
     }
     
