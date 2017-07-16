@@ -31,8 +31,11 @@ class WordPushSettingsViewController: UIViewController, UITableViewDelegate, UIT
         tipsLabel.text = "随记单词会定时推送单词，让你瞄一眼锁屏屏幕就能记住一个单词。推送通知不会有声音和振动，请放心开启。"
         tipsLabel.font = UIFont.systemFont(ofSize: 12)
         tipsLabel.textColor = UIColor.gray
-        tableView.tableFooterView = tipsLabel
-        tipsLabel.sizeToFit()
+        tipsLabel.frame = CGRect(x: 15, y: 0, width: self.view.frame.width - 30, height: 50)
+        
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        footerView.addSubview(tipsLabel)
+        tableView.tableFooterView = footerView
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: .plain, target: self, action: #selector(WordPushSettingsViewController.doneTap(sender:)))
         
