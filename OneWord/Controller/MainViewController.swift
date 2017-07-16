@@ -370,18 +370,16 @@ extension MainViewController : UNUserNotificationCenterDelegate{
     }
     
     func setDefaultWordPushSettings(){
-        var frequency = UserDefaults.standard.integer(forKey: "pushWordFrequency")
         let notifcationService = NotificationService()
+        var frequency = notifcationService.frequency!
         if frequency == 0{
             //默认值是一天3次
             frequency = 3
             
+            notifcationService.updateFrequency(frequency: frequency)
             notifcationService.createNotifications(for: 7, by: frequency)
-            
-            UserDefaults.standard.set(frequency, forKey: "pushWordFrequency")
-            UserDefaults.standard.synchronize()
         } else{
-            notifcationService.resetNotificationsIfNeeded(by: frequency)
+            notifcationService.appendNotificationsIfNeeded(by: frequency)
         }
     }
 }

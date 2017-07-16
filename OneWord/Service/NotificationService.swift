@@ -10,6 +10,17 @@ import Foundation
 import UserNotifications
 
 class NotificationService {
+    private(set) var frequency:Int!
+    
+    init() {
+        frequency = UserDefaults.standard.integer(forKey: "pushWordFrequency")
+    }
+    
+    func updateFrequency(frequency:Int){
+        self.frequency = frequency
+        UserDefaults.standard.set(frequency, forKey: "pushWordFrequency")
+        UserDefaults.standard.synchronize()
+    }
     
     func createNotifications(for days:Int, by frequency:Int){
         // frequency是一天几次
@@ -24,7 +35,16 @@ class NotificationService {
         }
     }
     
-    func resetNotificationsIfNeeded(by frequency: Int){
+    func resetNotifications(by frequency: Int){
+        UNUserNotificationCenter.current().getPendingNotificationRequests { (requestList) in
+            print("\(Date()) -- 还有\(requestList.count)个通知请求未经展示。")
+            
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            self.createNotifications(for: 7, by: frequency)
+        }
+    }
+    
+    func appendNotificationsIfNeeded(by frequency: Int){
         UNUserNotificationCenter.current().getPendingNotificationRequests { (requestList) in
             print("\(Date()) -- 还有\(requestList.count)个通知请求未经展示。")
             
