@@ -41,10 +41,9 @@ class MainViewController: UIViewController {
     
     private func initWriteBoardView(){
         let boardView = UIView()
-        boardView.layer.shadowColor = UIColor.red.cgColor//UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).cgColor
-        boardView.layer.masksToBounds = false
-//        boardView.layer.shadowOffset = CGSize(width: 500, height: 300)
-        boardView.layer.shadowRadius = 5
+        boardView.layer.shadowColor = UIColor.black.cgColor
+        boardView.layer.shadowOpacity = 0.8
+        boardView.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.view.addSubview(boardView)
         boardView.snp.makeConstraints { (maker) in
             maker.bottom.equalTo(self.view)
