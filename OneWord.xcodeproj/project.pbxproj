@@ -100,6 +100,12 @@
 		82E9DDD51EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
 		82E9DDD61EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
 		82E9DDD71EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */; };
+		82F934891F1CB7CD00AE31DE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934871F1CB7CD00AE31DE /* Fabric.framework */; };
+		82F9348A1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934871F1CB7CD00AE31DE /* Fabric.framework */; };
+		82F9348B1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934871F1CB7CD00AE31DE /* Fabric.framework */; };
+		82F9348C1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
+		82F9348D1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
+		82F9348E1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +222,8 @@
 		82E9DDBD1EE04C5400689D02 /* MainServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainServiceTests.swift; sourceTree = "<group>"; };
 		82E9DDC91EE6BA9B00689D02 /* WordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		82E9DDD31EE7053E00689D02 /* CircularlyPagedScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularlyPagedScrollView.swift; sourceTree = "<group>"; };
+		82F934871F1CB7CD00AE31DE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		82F934881F1CB7CD00AE31DE /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +233,7 @@
 			files = (
 				82A0E0B51EECDF7C00581956 /* SystemConfiguration.framework in Frameworks */,
 				82A9239F1EF2D128004937EA /* UT.framework in Frameworks */,
+				82F9348C1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
 				82A0E0B31EECDF7500581956 /* CoreTelephony.framework in Frameworks */,
 				82A923961EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
 				82A0E0B11EECDF6F00581956 /* libresolv.tbd in Frameworks */,
@@ -234,6 +243,7 @@
 				82A923A21EF2D128004937EA /* UTDID.framework in Frameworks */,
 				82A923901EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
 				82A923931EF2D128004937EA /* AlicloudUtils.framework in Frameworks */,
+				82F934891F1CB7CD00AE31DE /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A923A31EF2D128004937EA /* UTDID.framework in Frameworks */,
+				82F9348D1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
 				82A9239D1EF2D128004937EA /* SnapKit.framework in Frameworks */,
 				82A923A01EF2D128004937EA /* UT.framework in Frameworks */,
+				82F9348A1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */,
 				82A923971EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
 				82A923911EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
 				82A9239A1EF2D128004937EA /* NotificationBanner.framework in Frameworks */,
@@ -256,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A923A41EF2D128004937EA /* UTDID.framework in Frameworks */,
+				82F9348E1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
 				82A9239E1EF2D128004937EA /* SnapKit.framework in Frameworks */,
 				82A923A11EF2D128004937EA /* UT.framework in Frameworks */,
+				82F9348B1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */,
 				82A923981EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
 				82A923921EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
 				82A9239B1EF2D128004937EA /* NotificationBanner.framework in Frameworks */,
@@ -355,6 +369,8 @@
 		82A923881EF2D128004937EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82F934871F1CB7CD00AE31DE /* Fabric.framework */,
+				82F934881F1CB7CD00AE31DE /* Crashlytics.framework */,
 				820B84451F165B02007E3C15 /* UserNotifications.framework */,
 				82E964641E8658A3006449E9 /* NotificationCenter.framework */,
 				82A0E0B41EECDF7C00581956 /* SystemConfiguration.framework */,
@@ -426,6 +442,7 @@
 				82E964731E8658A3006449E9 /* Embed App Extensions */,
 				8208BC8D1E8A616E0063124C /* Embed Frameworks */,
 				824DFE471EA482DD005911C2 /* ShellScript */,
+				82F934861F1CB79800AE31DE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -610,6 +627,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n\n# removes unused architectures.\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\n\ndo\n\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\n\ndo\n\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\n\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\n\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\n\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\n\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
+		};
+		82F934861F1CB79800AE31DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6d9e2c619922696cac757af0bbec90c3b7faa5b3 328018b88b1701973b0f7e00982be4700ab22f208eab2317e157f47045fa8f57";
 		};
 /* End PBXShellScriptBuildPhase section */
 

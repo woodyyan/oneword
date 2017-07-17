@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import UserNotifications
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.rootViewController = UINavigationController.init(rootViewController: MainViewController());
         
+        Fabric.with([Crashlytics.self])
         initAliyunService()
         setPushCategories()
         
