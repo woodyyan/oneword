@@ -41,7 +41,9 @@ class NotificationService {
             print("\(Date()) -- 还有\(requestList.count)个通知请求未经展示。")
             
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-            self.createNotifications(for: 7, by: frequency)
+            if frequency > 0{
+                self.createNotifications(for: 7, by: frequency)
+            }
         }
     }
     
@@ -72,9 +74,10 @@ class NotificationService {
             let hours = getHours(by: frequency)
             for hour in hours{
                 var date = lastDate
-                date.year = getYear(year: lastDate.year!, month: lastDate.month! + 1)
-                date.month = getMonth(month: lastDate.month! + 1)
-                date.day = getDay(day: lastDate.day! + i)
+                let dayMonthYear = getDayMonthYear(day: lastDate.day! + i, month: lastDate.month!, year: lastDate.year!)
+                date.year = dayMonthYear.2
+                date.month = dayMonthYear.1
+                date.day = dayMonthYear.0
                 date.hour = hour
                 date.minute = 0
                 date.second = 0
@@ -84,31 +87,20 @@ class NotificationService {
         return results
     }
     
-    private func getYear(year:Int, month:Int) -> Int{
-        var result = year
-        if month > 12{
-            result = result + 1
-        }
-        
-        return result
-    }
-    
-    private func getMonth(month:Int) -> Int{
-        var result = month
-        if result > 12{
-            result = 1
-        }
-        
-        return result
-    }
-    
-    private func getDay(day:Int) -> Int{
-        var result = day
+    private func getDayMonthYear(day:Int, month:Int, year:Int) -> (Int, Int, Int){
+        var resultDay = day
+        var resultMonth = month
+        var resultYear = year
         let lastDay = getLastDay()
         if day > lastDay{
-            result = lastDay - day
+            resultDay = lastDay - day
+            resultMonth += 1
+            if resultMonth > 12{
+                resultMonth = 1
+                resultYear += 1
+            }
         }
-        return result
+        return (resultDay, resultMonth, resultYear)
     }
     
     private func getLastDay() -> Int{
