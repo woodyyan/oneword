@@ -93,7 +93,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     fileprivate func recommandToFriends() {
         if let url = URL(string: appStoreUrl) {
-            let controller = UIActivityViewController(activityItems: [url], applicationActivities: [])
+            let controller = UIActivityViewController(activityItems: ["推荐「随记单词」给你", url], applicationActivities: [])
             controller.excludedActivityTypes = [.addToReadingList, .assignToContact, .openInIBooks]
             self.present(controller, animated: true, completion: nil)
         }
