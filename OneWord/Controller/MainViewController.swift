@@ -12,6 +12,8 @@ import NotificationBanner
 import UserNotifications
 
 class MainViewController: UIViewController {
+    private let shareButtonTag = 1111
+    
     fileprivate let wordTextKey = "wordText"
     fileprivate let soundmarkKey = "soundmark"
     fileprivate let partOfSpeechKey = "partOfSpeech"
@@ -72,6 +74,7 @@ class MainViewController: UIViewController {
         }
         
         let shareButton = UIButton(type: .custom)
+        shareButton.tag = shareButtonTag
         shareButton.setImage(UIImage(named: "share"), for: .normal)
         shareButton.addTarget(self, action: #selector(MainViewController.shareClick(sender:)), for: .touchUpInside)
         self.view.addSubview(shareButton)
@@ -104,18 +107,29 @@ class MainViewController: UIViewController {
             }
         }
         
-        shareWord(word)
+        shareWord(word, sender)
     }
     
-    func shareWord(_ word:Word?){
+    func shareWord(_ word:Word?, _ sourceView:UIView? = nil){
         if word == nil{
             let banner = NotificationBanner(title: "分享失败", style: .warning)
             banner.show()
+            return
         }
         
         let image = ImageCreator.createWordImage(for: word!)
+        
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: [])
         controller.excludedActivityTypes = [.addToReadingList, .assignToContact, .openInIBooks]
+        controller.modalPresentationStyle = .popover
+        controller.popoverPresentationController?.sourceView = self.view
+        var rectView:UIView! = sourceView
+        if sourceView == nil{
+            if let shareButton = self.view.viewWithTag(shareButtonTag){
+                rectView = shareButton
+            }
+        }
+        controller.popoverPresentationController?.sourceRect = rectView.frame
         self.present(controller, animated: true, completion: nil)
     }
     
