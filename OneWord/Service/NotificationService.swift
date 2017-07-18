@@ -27,8 +27,7 @@ class NotificationService {
         // frequency是一天几次
         // days是重复的天数
         let service = MainService()
-        let dateComponents: Set<Calendar.Component> = [.second, .minute, .hour, .day, .month, .year]
-        let currentDate = Calendar.current.dateComponents(dateComponents, from: Date())
+        let currentDate = Calendar.current.dateComponents(in: .current, from: Date())
         let totalDateComponents = getDateComponents(from: currentDate, by: frequency)
         for date in totalDateComponents{
             let word = service.getRandomWord()
@@ -68,20 +67,20 @@ class NotificationService {
         }
     }
     
-    private func getDateComponents(from lastDate:DateComponents, by frequency:Int) -> [DateComponents]{
+    private func getDateComponents(from lastComponents:DateComponents, by frequency:Int) -> [DateComponents]{
         var results = [DateComponents]()
         for i in 1...7{
             let hours = getHours(by: frequency)
             for hour in hours{
-                var date = lastDate
-                let dayMonthYear = getDayMonthYear(day: lastDate.day! + i, month: lastDate.month!, year: lastDate.year!)
-                date.year = dayMonthYear.2
-                date.month = dayMonthYear.1
-                date.day = dayMonthYear.0
-                date.hour = hour
-                date.minute = 0
-                date.second = 0
-                results.append(date)
+                let dayMonthYear = getDayMonthYear(day: lastComponents.day! + i, month: lastComponents.month!, year: lastComponents.year!)
+                let year = dayMonthYear.2
+                let month = dayMonthYear.1
+                let day = dayMonthYear.0
+                let hour = hour
+                let minute = 0
+                let second = 0
+                let newComponents = DateComponents(calendar: Calendar.current, timeZone: .current, year: year, month: month, day: day, hour: hour, minute: minute, second: second)
+                results.append(newComponents)
             }
         }
         return results

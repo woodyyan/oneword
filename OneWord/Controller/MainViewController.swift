@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
         
         registerNotification()
     }
-    
+        
     private func initWriteBoardView(){
         let boardView = UIView()
         self.view.addSubview(boardView)
