@@ -106,6 +106,7 @@
 		82F9348C1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
 		82F9348D1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
 		82F9348E1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
+		82F9348F1F1DFA8100AE31DE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F9348F1F1DFA8100AE31DE /* SnapKit.framework in Frameworks */,
 				820B84461F165B02007E3C15 /* UserNotifications.framework in Frameworks */,
 				82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */,
 			);
@@ -1003,6 +1005,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1022,6 +1025,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = OneWordTodayExtenstion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
