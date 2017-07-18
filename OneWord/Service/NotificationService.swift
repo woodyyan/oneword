@@ -68,11 +68,14 @@ class NotificationService {
     }
     
     private func getDateComponents(from lastComponents:DateComponents, by frequency:Int) -> [DateComponents]{
+        // iOS最多添加64条本地通知
         var results = [DateComponents]()
-        for i in 1...7{
+        var count = 0
+        var dayCount = 0
+        while true {
             let hours = getHours(by: frequency)
             for hour in hours{
-                let dayMonthYear = getDayMonthYear(day: lastComponents.day! + i, month: lastComponents.month!, year: lastComponents.year!)
+                let dayMonthYear = getDayMonthYear(day: lastComponents.day! + dayCount, month: lastComponents.month!, year: lastComponents.year!)
                 let year = dayMonthYear.2
                 let month = dayMonthYear.1
                 let day = dayMonthYear.0
@@ -81,10 +84,39 @@ class NotificationService {
                 let second = 0
                 let newComponents = DateComponents(calendar: Calendar.current, timeZone: .current, year: year, month: month, day: day, hour: hour, minute: minute, second: second)
                 results.append(newComponents)
+                
+                count = results.count
+                if count >= 64{
+                    break
+                }
+            }
+            dayCount += 1
+            
+            if count >= 64{
+                break
             }
         }
         return results
     }
+    
+//    private func getDateComponents(from lastComponents:DateComponents, by frequency:Int) -> [DateComponents]{
+//        var results = [DateComponents]()
+//        for i in 1...7{
+//            let hours = getHours(by: frequency)
+//            for hour in hours{
+//                let dayMonthYear = getDayMonthYear(day: lastComponents.day! + i, month: lastComponents.month!, year: lastComponents.year!)
+//                let year = dayMonthYear.2
+//                let month = dayMonthYear.1
+//                let day = dayMonthYear.0
+//                let hour = hour
+//                let minute = 0
+//                let second = 0
+//                let newComponents = DateComponents(calendar: Calendar.current, timeZone: .current, year: year, month: month, day: day, hour: hour, minute: minute, second: second)
+//                results.append(newComponents)
+//            }
+//        }
+//        return results
+//    }
     
     private func getDayMonthYear(day:Int, month:Int, year:Int) -> (Int, Int, Int){
         var resultDay = day
