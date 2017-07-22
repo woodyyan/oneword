@@ -397,7 +397,7 @@ extension MainViewController : UNUserNotificationCenterDelegate{
     
     func setDefaultWordPushSettings(){
         let notifcationService = NotificationService()
-        var frequency = notifcationService.frequency!
+        var frequency = notifcationService.getFrequency()
         if frequency == 0{
             //默认值是一天3次
             frequency = 3

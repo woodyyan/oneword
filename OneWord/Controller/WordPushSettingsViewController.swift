@@ -12,6 +12,7 @@ class WordPushSettingsViewController: UIViewController, UITableViewDelegate, UIT
     private var lastFrequency = -1
     private var frequency = 3
     private var tableView:UITableView!
+    private let service = NotificationService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class WordPushSettingsViewController: UIViewController, UITableViewDelegate, UIT
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完成", style: .plain, target: self, action: #selector(WordPushSettingsViewController.doneTap(sender:)))
         
-        frequency = UserDefaults.standard.integer(forKey: "pushWordFrequency")
+        frequency = service.getFrequency()
         lastFrequency = frequency
     }
     
@@ -51,7 +52,6 @@ class WordPushSettingsViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func reesetWordPush(){
-        let service = NotificationService()
         service.updateFrequency(frequency: frequency)
         service.resetNotifications(by: frequency)
     }

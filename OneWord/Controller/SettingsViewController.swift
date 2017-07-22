@@ -11,8 +11,22 @@ import UIKit
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     fileprivate let service = AboutService()
     fileprivate var appStoreUrl = "https://itunes.apple.com/us/app/id1227214796"
+    private let notificationService = NotificationService()
+    private var frequency = 3
     
     var tableView:UITableView!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let newFrequency = notificationService.getFrequency()
+        if frequency != newFrequency{
+            frequency = newFrequency
+            if tableView != nil {
+                tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +34,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         self.title = "设置"
         self.view.backgroundColor = UIColor.white
         
-        let tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.grouped)
+        tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.grouped)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.view.addSubview(tableView)
+        
+        frequency = notificationService.getFrequency()
     }
     
     // MARK: - TableView
@@ -104,7 +120,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.accessoryType = .disclosureIndicator
         switch cellType {
         case .push:
-            cell.textLabel?.text = "单词推送频率"
+            let newCell = UITableViewCell(style: .value1, reuseIdentifier:"about")
+            newCell.textLabel?.text = "单词推送频率"
+            newCell.detailTextLabel?.text = String(frequency) + "次"
+            if frequency == -1{
+                newCell.detailTextLabel?.text = "关闭"
+            }
+            newCell.accessoryType = .disclosureIndicator
+            return newCell
         case .recommand:
             cell.textLabel?.text = "告诉小伙伴"
         case .comment:

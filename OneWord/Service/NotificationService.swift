@@ -11,14 +11,13 @@ import UserNotifications
 import UIKit
 
 class NotificationService {
-    private(set) var frequency:Int!
     
-    init() {
-        frequency = UserDefaults.standard.integer(forKey: "pushWordFrequency")
+    func getFrequency() -> Int{
+        let frequency = UserDefaults.standard.integer(forKey: "pushWordFrequency")
+        return frequency
     }
     
     func updateFrequency(frequency:Int){
-        self.frequency = frequency
         UserDefaults.standard.set(frequency, forKey: "pushWordFrequency")
         UserDefaults.standard.synchronize()
     }
