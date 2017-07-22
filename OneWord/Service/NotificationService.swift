@@ -49,8 +49,8 @@ class NotificationService {
         UNUserNotificationCenter.current().getPendingNotificationRequests { (requestList) in
             print("\(Date()) -- 还有\(requestList.count)个通知请求未经展示。")
             
-            // 如果还未推送的小于2天，就添加新的推送
-            if requestList.count/frequency < 2{
+            // 如果还未推送的小于20次，就添加新的推送
+            if requestList.count < 20{
                 if let lastRequest = requestList.last{
                     if let trigger = lastRequest.trigger as? UNCalendarNotificationTrigger{
                         let dateComponents = trigger.dateComponents
