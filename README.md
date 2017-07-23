@@ -14,6 +14,11 @@
 
 App Store下载地址：[随记单词 on the App Store](https://itunes.apple.com/us/app/%E9%9A%8F%E8%AE%B0%E5%8D%95%E8%AF%8D/id1227214796?l=zh&ls=1&mt=8)
 
+![image1](https://github.com/woodyyan/oneword/raw/develop/Screenshots/1.jpg)
+![image2](https://github.com/woodyyan/oneword/raw/develop/Screenshots/2.jpg)
+![image3](https://github.com/woodyyan/oneword/raw/develop/Screenshots/3.jpg)
+![image4](https://github.com/woodyyan/oneword/raw/develop/Screenshots/4.jpg)
+
 ## 第三方开源库
 
 * [SnapKit](https://github.com/SnapKit/SnapKit)
