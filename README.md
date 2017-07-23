@@ -1,5 +1,6 @@
 # 随记单词 for iOS
 [![Build Status](https://travis-ci.org/woodyyan/oneword.svg?branch=develop)](https://travis-ci.org/woodyyan/oneword)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5974736d22facc00016ab236&branch=develop&build=latest)](https://dashboard.buddybuild.com/apps/5974736d22facc00016ab236/build/latest?branch=develop)
 
 我们一天会解锁手机100多次
 每次解锁，在通知栏停留那几秒，足够记忆一个单词
