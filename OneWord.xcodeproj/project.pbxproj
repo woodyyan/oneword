@@ -26,6 +26,7 @@
 		8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		82303BB31F249925004C06F1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 82303BB21F249925004C06F1 /* .travis.yml */; };
+		82303BB51F24A05B004C06F1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 82303BB41F24A05B004C06F1 /* README.md */; };
 		82347E301F000307002D8024 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82347E2F1F000307002D8024 /* Media.xcassets */; };
 		82347E321F00C91D002D8024 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82347E331F00C93D002D8024 /* MarqueeLabelSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -193,6 +194,7 @@
 		8224D4F81EEBD6B900FF593B /* PaintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintView.swift; sourceTree = "<group>"; };
 		8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewControler.swift; sourceTree = "<group>"; };
 		82303BB21F249925004C06F1 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		82303BB41F24A05B004C06F1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		82347E2F1F000307002D8024 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		82347E5C1F060347002D8024 /* ImageCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCreator.swift; sourceTree = "<group>"; };
 		824DFE5B1EA4DF47005911C2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		821FC4D51E78F08800A64E94 = {
 			isa = PBXGroup;
 			children = (
+				82303BB41F24A05B004C06F1 /* README.md */,
 				82303BB21F249925004C06F1 /* .travis.yml */,
 				820B84471F166DED007E3C15 /* Cartfile */,
 				82A923881EF2D128004937EA /* Frameworks */,
@@ -660,6 +663,7 @@
 				82DF1BD11F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */,
 				82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82347E5D1F060347002D8024 /* ImageCreator.swift in Sources */,
+				82303BB51F24A05B004C06F1 /* README.md in Sources */,
 				82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
