@@ -1,11 +1,3 @@
-//
-//  MainService.swift
-//  OneWord
-//
-//  Created by Songbai Yan on 01/06/2017.
-//  Copyright © 2017 Songbai Yan. All rights reserved.
-//
-
 import Foundation
 
 class MainService {
