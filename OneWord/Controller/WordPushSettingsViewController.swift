@@ -44,7 +44,7 @@ class WordPushSettingsViewController: UIViewController, UITableViewDelegate, UIT
         lastFrequency = frequency
     }
     
-    func doneTap(sender:UIBarButtonItem){
+    @objc func doneTap(sender:UIBarButtonItem){
         if lastFrequency != frequency{
             reesetWordPush()
         }
