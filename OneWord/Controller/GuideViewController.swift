@@ -42,7 +42,7 @@ class GuideViewController: UIViewController {
         }
     }
     
-    func okClick(sender:UIButton){
+    @objc func okClick(sender:UIButton){
         self.navigationController?.popViewController(animated: true)
     }
 }
