@@ -7,4 +7,5 @@ framework module NotificationBanner {
 
 module NotificationBanner.Swift {
     header "NotificationBanner-Swift.h"
+    requires objc
 }

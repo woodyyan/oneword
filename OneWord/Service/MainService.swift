@@ -113,13 +113,13 @@ class MainService {
                 let s1 = str.substring(to: range.location)
                 let s2 = str.substring(with: range)
                 let s3 = str.substring(from: range.location + range.length)
-                if s1.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                if s1.trimmingCharacters(in: CharacterSet.whitespaces).count > 0{
                     components.append(s1)
                 }
-                if s2.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                if s2.trimmingCharacters(in: CharacterSet.whitespaces).count > 0{
                     components.append(s2)
                 }
-                if s3.trimmingCharacters(in: CharacterSet.whitespaces).characters.count > 0{
+                if s3.trimmingCharacters(in: CharacterSet.whitespaces).count > 0{
                     components.append(s3)
                 }
                 break

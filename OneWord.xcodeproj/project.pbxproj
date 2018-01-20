@@ -26,7 +26,6 @@
 		8224D4FF1EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		8224D5001EEBED6F00FF593B /* AboutViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8224D4FD1EEBED6F00FF593B /* AboutViewControler.swift */; };
 		82303BB31F249925004C06F1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 82303BB21F249925004C06F1 /* .travis.yml */; };
-		82303BB51F24A05B004C06F1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 82303BB41F24A05B004C06F1 /* README.md */; };
 		82303BBB1F24A2B9004C06F1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82303BB71F24A2B9004C06F1 /* 1.jpg */; };
 		82303BBC1F24A2B9004C06F1 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82303BB81F24A2B9004C06F1 /* 2.jpg */; };
 		82303BBD1F24A2B9004C06F1 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82303BB91F24A2B9004C06F1 /* 3.jpg */; };
@@ -34,9 +33,6 @@
 		82303BC01F24A90E004C06F1 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 82303BBF1F24A90E004C06F1 /* .gitattributes */; };
 		82303BC21F24AD28004C06F1 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 82303BC11F24AD28004C06F1 /* Cartfile.resolved */; };
 		82347E301F000307002D8024 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82347E2F1F000307002D8024 /* Media.xcassets */; };
-		82347E321F00C91D002D8024 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		82347E331F00C93D002D8024 /* MarqueeLabelSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		82347E341F00C956002D8024 /* NotificationBanner.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82347E5D1F060347002D8024 /* ImageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82347E5C1F060347002D8024 /* ImageCreator.swift */; };
 		82347E5E1F060347002D8024 /* ImageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82347E5C1F060347002D8024 /* ImageCreator.swift */; };
 		82347E5F1F077C5C002D8024 /* ImageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82347E5C1F060347002D8024 /* ImageCreator.swift */; };
@@ -55,24 +51,12 @@
 		82A923931EF2D128004937EA /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238A1EF2D128004937EA /* AlicloudUtils.framework */; };
 		82A923941EF2D128004937EA /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238A1EF2D128004937EA /* AlicloudUtils.framework */; };
 		82A923951EF2D128004937EA /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238A1EF2D128004937EA /* AlicloudUtils.framework */; };
-		82A923961EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; };
-		82A923971EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; };
-		82A923981EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; };
-		82A923991EF2D128004937EA /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; };
-		82A9239A1EF2D128004937EA /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; };
-		82A9239B1EF2D128004937EA /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; };
-		82A9239C1EF2D128004937EA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; };
-		82A9239D1EF2D128004937EA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; };
-		82A9239E1EF2D128004937EA /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; };
 		82A9239F1EF2D128004937EA /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238E1EF2D128004937EA /* UT.framework */; };
 		82A923A01EF2D128004937EA /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238E1EF2D128004937EA /* UT.framework */; };
 		82A923A11EF2D128004937EA /* UT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238E1EF2D128004937EA /* UT.framework */; };
 		82A923A21EF2D128004937EA /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238F1EF2D128004937EA /* UTDID.framework */; };
 		82A923A31EF2D128004937EA /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238F1EF2D128004937EA /* UTDID.framework */; };
 		82A923A41EF2D128004937EA /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238F1EF2D128004937EA /* UTDID.framework */; };
-		82A923A51EF2D153004937EA /* MarqueeLabelSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		82A923A61EF2D153004937EA /* NotificationBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238C1EF2D128004937EA /* NotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		82A923A71EF2D153004937EA /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82DF1BCB1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
 		82DF1BCC1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
 		82DF1BCD1F18741400AEF01F /* AboutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BCA1F18741400AEF01F /* AboutService.swift */; };
@@ -82,6 +66,16 @@
 		82DF1BD51F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
 		82DF1BD61F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
 		82DF1BD71F18BF9100AEF01F /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF1BD41F18BF9100AEF01F /* NotificationService.swift */; };
+		82E5805D2012FCF1003E2435 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5805C2012FCF1003E2435 /* SnapKit.framework */; };
+		82E5805E2012FD1C003E2435 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5805C2012FCF1003E2435 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82E5806F2013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */; };
+		82E580702013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */; };
+		82E580712013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */; };
+		82E580722013115B003E2435 /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806E2013115B003E2435 /* NotificationBanner.framework */; };
+		82E580732013115B003E2435 /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806E2013115B003E2435 /* NotificationBanner.framework */; };
+		82E580742013115B003E2435 /* NotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806E2013115B003E2435 /* NotificationBanner.framework */; };
+		82E5807520131253003E2435 /* MarqueeLabelSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82E5807620131253003E2435 /* NotificationBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 82E5806E2013115B003E2435 /* NotificationBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E964641E8658A3006449E9 /* NotificationCenter.framework */; };
 		82E964681E8658A3006449E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E964671E8658A3006449E9 /* TodayViewController.swift */; };
 		82E9646B1E8658A3006449E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E964691E8658A3006449E9 /* MainInterface.storyboard */; };
@@ -114,7 +108,6 @@
 		82F9348C1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
 		82F9348D1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
 		82F9348E1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F934881F1CB7CD00AE31DE /* Crashlytics.framework */; };
-		82F9348F1F1DFA8100AE31DE /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A9238D1EF2D128004937EA /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,9 +141,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				82A923A51EF2D153004937EA /* MarqueeLabelSwift.framework in Embed Frameworks */,
-				82A923A61EF2D153004937EA /* NotificationBanner.framework in Embed Frameworks */,
-				82A923A71EF2D153004937EA /* SnapKit.framework in Embed Frameworks */,
+				82E5807520131253003E2435 /* MarqueeLabelSwift.framework in Embed Frameworks */,
+				82E5807620131253003E2435 /* NotificationBanner.framework in Embed Frameworks */,
+				82E5805E2012FD1C003E2435 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,9 +154,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				82347E341F00C956002D8024 /* NotificationBanner.framework in CopyFiles */,
-				82347E331F00C93D002D8024 /* MarqueeLabelSwift.framework in CopyFiles */,
-				82347E321F00C91D002D8024 /* SnapKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,14 +208,14 @@
 		82A923601EEEE6CB004937EA /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		82A923891EF2D128004937EA /* AlicloudMobileAnalitics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudMobileAnalitics.framework; sourceTree = "<group>"; };
 		82A9238A1EF2D128004937EA /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
-		82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MarqueeLabelSwift.framework; sourceTree = "<group>"; };
-		82A9238C1EF2D128004937EA /* NotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NotificationBanner.framework; sourceTree = "<group>"; };
-		82A9238D1EF2D128004937EA /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		82A9238E1EF2D128004937EA /* UT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UT.framework; sourceTree = "<group>"; };
 		82A9238F1EF2D128004937EA /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		82DF1BCA1F18741400AEF01F /* AboutService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutService.swift; sourceTree = "<group>"; };
 		82DF1BD01F188D7D00AEF01F /* WordPushSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPushSettingsViewController.swift; sourceTree = "<group>"; };
 		82DF1BD41F18BF9100AEF01F /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		82E5805C2012FCF1003E2435 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarqueeLabelSwift.framework; path = Carthage/Build/iOS/MarqueeLabelSwift.framework; sourceTree = SOURCE_ROOT; };
+		82E5806E2013115B003E2435 /* NotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationBanner.framework; path = Carthage/Build/iOS/NotificationBanner.framework; sourceTree = SOURCE_ROOT; };
 		82E964621E8658A3006449E9 /* OneWordTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneWordTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E964641E8658A3006449E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		82E964671E8658A3006449E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -252,11 +242,11 @@
 				82A9239F1EF2D128004937EA /* UT.framework in Frameworks */,
 				82F9348C1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
 				82A0E0B31EECDF7500581956 /* CoreTelephony.framework in Frameworks */,
-				82A923961EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
+				82E5806F2013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */,
+				82E5805D2012FCF1003E2435 /* SnapKit.framework in Frameworks */,
 				82A0E0B11EECDF6F00581956 /* libresolv.tbd in Frameworks */,
 				82A0E0AF1EECDF4B00581956 /* libz.tbd in Frameworks */,
-				82A9239C1EF2D128004937EA /* SnapKit.framework in Frameworks */,
-				82A923991EF2D128004937EA /* NotificationBanner.framework in Frameworks */,
+				82E580722013115B003E2435 /* NotificationBanner.framework in Frameworks */,
 				82A923A21EF2D128004937EA /* UTDID.framework in Frameworks */,
 				82A923901EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
 				82A923931EF2D128004937EA /* AlicloudUtils.framework in Frameworks */,
@@ -268,14 +258,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E580702013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */,
 				82A923A31EF2D128004937EA /* UTDID.framework in Frameworks */,
 				82F9348D1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
-				82A9239D1EF2D128004937EA /* SnapKit.framework in Frameworks */,
 				82A923A01EF2D128004937EA /* UT.framework in Frameworks */,
 				82F9348A1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */,
-				82A923971EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
+				82E580732013115B003E2435 /* NotificationBanner.framework in Frameworks */,
 				82A923911EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
-				82A9239A1EF2D128004937EA /* NotificationBanner.framework in Frameworks */,
 				82A923941EF2D128004937EA /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,14 +273,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E580712013115B003E2435 /* MarqueeLabelSwift.framework in Frameworks */,
 				82A923A41EF2D128004937EA /* UTDID.framework in Frameworks */,
 				82F9348E1F1CB7CD00AE31DE /* Crashlytics.framework in Frameworks */,
-				82A9239E1EF2D128004937EA /* SnapKit.framework in Frameworks */,
 				82A923A11EF2D128004937EA /* UT.framework in Frameworks */,
 				82F9348B1F1CB7CD00AE31DE /* Fabric.framework in Frameworks */,
-				82A923981EF2D128004937EA /* MarqueeLabelSwift.framework in Frameworks */,
+				82E580742013115B003E2435 /* NotificationBanner.framework in Frameworks */,
 				82A923921EF2D128004937EA /* AlicloudMobileAnalitics.framework in Frameworks */,
-				82A9239B1EF2D128004937EA /* NotificationBanner.framework in Frameworks */,
 				82A923951EF2D128004937EA /* AlicloudUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +288,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F9348F1F1DFA8100AE31DE /* SnapKit.framework in Frameworks */,
 				820B84461F165B02007E3C15 /* UserNotifications.framework in Frameworks */,
 				82E964651E8658A3006449E9 /* NotificationCenter.framework in Frameworks */,
 			);
@@ -403,6 +390,9 @@
 		82A923881EF2D128004937EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82E5806D2013115B003E2435 /* MarqueeLabelSwift.framework */,
+				82E5806E2013115B003E2435 /* NotificationBanner.framework */,
+				82E5805C2012FCF1003E2435 /* SnapKit.framework */,
 				82F934871F1CB7CD00AE31DE /* Fabric.framework */,
 				82F934881F1CB7CD00AE31DE /* Crashlytics.framework */,
 				820B84451F165B02007E3C15 /* UserNotifications.framework */,
@@ -413,9 +403,6 @@
 				82A0E0AE1EECDF4B00581956 /* libz.tbd */,
 				82A923891EF2D128004937EA /* AlicloudMobileAnalitics.framework */,
 				82A9238A1EF2D128004937EA /* AlicloudUtils.framework */,
-				82A9238B1EF2D128004937EA /* MarqueeLabelSwift.framework */,
-				82A9238C1EF2D128004937EA /* NotificationBanner.framework */,
-				82A9238D1EF2D128004937EA /* SnapKit.framework */,
 				82A9238E1EF2D128004937EA /* UT.framework */,
 				82A9238F1EF2D128004937EA /* UTDID.framework */,
 			);
@@ -549,12 +536,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Songbai Yan";
 				TargetAttributes = {
 					821FC4DD1E78F08800A64E94 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XD7JAMNS86;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -565,18 +553,21 @@
 					821FC4F41E78F08800A64E94 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XD7JAMNS86;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 821FC4DD1E78F08800A64E94;
 					};
 					821FC4FF1E78F08800A64E94 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XD7JAMNS86;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 821FC4DD1E78F08800A64E94;
 					};
 					82E964611E8658A3006449E9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = XD7JAMNS86;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -695,7 +686,6 @@
 				82DF1BD11F188D7D00AEF01F /* WordPushSettingsViewController.swift in Sources */,
 				82E9DDCA1EE6BA9B00689D02 /* WordView.swift in Sources */,
 				82347E5D1F060347002D8024 /* ImageCreator.swift in Sources */,
-				82303BB51F24A05B004C06F1 /* README.md in Sources */,
 				82E9DDD41EE7053E00689D02 /* CircularlyPagedScrollView.swift in Sources */,
 				82E964781E86608B006449E9 /* Word.swift in Sources */,
 				821FC4E21E78F08800A64E94 /* AppDelegate.swift in Sources */,
@@ -820,7 +810,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -828,7 +820,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -870,7 +866,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -878,7 +876,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -925,7 +927,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneWord/OneWord-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -950,7 +953,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OneWord/OneWord-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -970,7 +974,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWordTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneWord.app/OneWord";
 			};
 			name = Debug;
@@ -991,7 +996,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWordTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneWord.app/OneWord";
 			};
 			name = Release;
@@ -1011,7 +1017,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWordUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = OneWord;
 			};
 			name = Debug;
@@ -1031,7 +1038,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.woodystudio.OneWordUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = OneWord;
 			};
 			name = Release;
@@ -1052,7 +1060,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1072,7 +1081,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.easystudio.rememberword.OneWordTodayExtenstion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -86,7 +86,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    func shareClick(sender:UIButton){
+    @objc func shareClick(sender:UIButton){
         let isFirstWord = loopView.contentOffset.x == 0
         var word:Word?
         if isFirstWord{
@@ -133,15 +133,15 @@ class MainViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    func aboutClick(sender: UIBarButtonItem){
+    @objc func aboutClick(sender: UIBarButtonItem){
         self.navigationController?.pushViewController(SettingsViewController(), animated: true)
     }
     
-    func guideClick(sender: UIBarButtonItem){
+    @objc func guideClick(sender: UIBarButtonItem){
         self.navigationController?.pushViewController(GuideViewController(), animated: true)
     }
     
-    func clearBoard(sender:UIButton){
+    @objc func clearBoard(sender:UIButton){
         paintBoard?.cleanAll()
     }
     
@@ -326,7 +326,7 @@ extension MainViewController{
         UIApplication.shared.keyWindow!.addSubview(backgroundView)
     }
     
-    func handleTapEvent(_ sender:UITapGestureRecognizer){
+    @objc func handleTapEvent(_ sender:UITapGestureRecognizer){
         sender.view?.removeFromSuperview()
     }
 }

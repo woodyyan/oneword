@@ -59,7 +59,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    func shareClick(sender:UIButton){
+    @objc func shareClick(sender:UIButton){
         let userDefaults = UserDefaults.init(suiteName: "group.oneWordSharedDefaults")
         userDefaults?.set(currentWord.text, forKey: "todayWordTextKey")
         userDefaults?.set(currentWord.soundmark, forKey: "todaySoundmarkKey")
@@ -69,7 +69,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.extensionContext?.open(URL(string: "EasyStudioOneWord://action=shareWord")!, completionHandler: nil)
     }
     
-    func switchClick(sender:UIButton){
+    @objc func switchClick(sender:UIButton){
         let word = service.getRandomWord()
         wordLabel.text = word.text
         soundmarkLabel.text = word.soundmark
